@@ -22,7 +22,7 @@ html {
 }
 
 body{
-  font: 1.5em/1.618em 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: #f9f7ed;
   height:100%;
   padding: 0;
@@ -30,27 +30,60 @@ body{
 }
 
 h1,h2,h3,h4,h5{
-  font: 4rem/1.618em 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-header{
+hr {
+  color: #cccac4;
+  background-color: #cccac4;
+  height: 2px;
+  margin: -0.5em 0;
+  padding: 0;
+  border: 0;
+}
+
+header {
   background-color: #ffffff;
   padding: 24px 0;
 }
+header.scrolled {
+  border-bottom: 3px #f9f7ed solid;
+}
 
-footer{
-  background-color: #ec5148;
+footer {
   padding: 12px 0;
   color: #ffffff;
   clear: both;
 }
 
-.below-the-footer{
-  background-color: #ec5148;
+.below-the-footer {
   padding: 24px 0;
   color: #ffffff;
   clear: both;
 }
+
+.box {
+  background-color: #ffffff;
+  height: 260px;
+}
+
+.bottom {
+  padding-bottom: 20px;
+}
+
+.big-bottom {
+  padding-bottom: 50px;
+}
+
+/* Colors: */
+.green { color: #437356; }
+.bg-green { background-color: #437356; }
+.light-green { color: #aac789; }
+.bg-light-green { background-color: #aac789; }
+.red { color: #ec5148; }
+.bg-red { background-color: #ec5148; }
+.beige { color: #f9f7ed; }
+.bg-beige { background-color: #f9f7ed; }
 
 /* #Page Styles
 ================================================== */
@@ -122,9 +155,6 @@ a.entry.active, a.entry:hover{
 
 /* #Dummy-stuffs
 ================================================== */
-.red{
-  color: #ec5148;
-}
 .right-aligned{
   text-align: right;
 }
