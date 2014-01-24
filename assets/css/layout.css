@@ -46,6 +46,7 @@ header {
   background-color: #ffffff;
   padding: 24px 0;
 }
+
 header.scrolled {
   border-bottom: 3px #f9f7ed solid;
 }
@@ -73,6 +74,55 @@ footer {
 
 .big-bottom {
   padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 767px) {
+  header .menu-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header .menu-button {
+    position: absolute;
+    right: 0;
+    top: 7px;
+  }
+
+  header .menu-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  header .title {
+    display: inline-block;
+  }
+
+  header .entry {
+    display: block;
+    border-top: #f9f7ed 1px solid;
+    padding-right: 60%;
+  }
+  header .entry:after {
+    content: '';
+    width: 60%;
+    display: inline-block;
+  }
+
+  header .menu {
+    overflow: hidden;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    max-height: 500px;
+    padding-top: 10px;
+  }
+
+  header .menu.hidden {
+    max-height: 0;
+    /*padding-top: 0;*/
+  }
 }
 
 /* Colors: */
@@ -113,8 +163,9 @@ a.entry{
   padding: 12px;
 }
 
-a.entry.active, a.entry:hover{
-  background: ;
+a.entry.selected, a.entry:hover{
+  background: #aac789;
+  color: #fff;
 }
 /* #Media Queries
 ================================================== */

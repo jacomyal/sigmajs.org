@@ -47,8 +47,11 @@
   ================================================== -->
   <header>
     <div class="container">
-      <div class="six columns"><h5>sigma<span class="red">js</span></h5></div>
-      <div class="ten columns right-aligned">
+      <div class="six columns">
+        <h5 class="title">sigma<span class="red">js</span></h5>
+        <div class="menu-button right-aligned fa fa-bars fa-2"></div>
+      </div>
+      <div class="ten columns right-aligned menu hidden">
         <a href="#get-started" class="entry">get started</a>
         <a href="#features" class="entry">features</a>
         <a href="#issues" class="entry">issues</a>
@@ -247,7 +250,7 @@
       else
         _header.addClass('scrolled');
 
-      $('a[href^="#"]', _header).removeClass('bg-light-green').each(function() {
+      $('a[href^="#"]', _header).removeClass('selected').each(function() {
         var dom,
             target = $(this),
             id = target.attr('href');
@@ -261,14 +264,18 @@
           $(window).scrollTop() < dom.position().top - _header.height() - _config.margin + 1
         ) {
 
-          $('a[href="' + id + '"]', _header).addClass('bg-light-green');
+          $('a[href="' + id + '"]', _header).addClass('selected');
           return false;
         }
       });
     });
 
+    $('.menu-button').click(function() {
+      $('.menu', _header).toggleClass('hidden');
+    });
+
     $(window).on('resize', function() {
-      // s$('footer').trigger('resize.ScrollToFixed')
+      // $(window).resize();
     });
   });
 
