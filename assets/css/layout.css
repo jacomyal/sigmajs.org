@@ -167,6 +167,64 @@ a.entry.selected, a.entry:hover{
   background: #aac789;
   color: #fff;
 }
+
+#easter {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#easter .background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+#easter-container {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#easter #close-easter {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#easter #close-easter:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#easter-container #disc {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#easter-container #ground {
+  position: absolute;
+  background: #ccc;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /* #Media Queries
 ================================================== */
 
