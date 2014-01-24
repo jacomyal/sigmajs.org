@@ -223,6 +223,8 @@
   <script>
   $(document).ready(function() {
     var _header = $('header'),
+        _footer = $('footer'),
+        _belowFooter = $('.below-the-footer'),
         _config = {
           margin: 50
         };
@@ -233,7 +235,9 @@
     // Dock the footer to the bottom of the page, but scroll up to reveal more
     $('footer').scrollToFixed({
       bottom: 0,
-      limit: $('footer').offset().top
+      limit: function() {
+        return _belowFooter.offset().top - _footer.outerHeight();
+      }
     });
 
     // Deal with the menu:
@@ -272,10 +276,6 @@
 
     $('.menu-button').click(function() {
       $('.menu', _header).toggleClass('hidden');
-    });
-
-    $(window).on('resize', function() {
-      // $(window).resize();
     });
   });
 
