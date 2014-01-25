@@ -51,6 +51,27 @@ header.scrolled {
   border-bottom: 3px #f9f7ed solid;
 }
 
+#title {
+  position: relative;
+  height: 300px;
+}
+
+#title div.title {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+
+#sigma-title {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  text-align: left;
+}
+
 footer {
   padding: 12px 0;
   color: #ffffff;

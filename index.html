@@ -62,9 +62,12 @@
   </header>
 
   <div class="container big-bottom">
-    <div class="sixteen columns center-aligned big-bottom">
-      <h1>sigma<span class="red">js</span></h1>
-      <h5>v1.0.0</h5>
+    <div id="title" class="sixteen columns center-aligned big-bottom">
+      <div id="sigma-title"></div>
+      <div class="title">
+        <h1>sigma<span class="red">js</span></h1>
+        <h5>v1.0.0</h5>
+      </div>
     </div>
     <hr />
   </div>
@@ -221,6 +224,7 @@
   <script src="/assets/js/jquery-scrolltofixed.js"></script>
   <script src="/assets/js/konami.js"></script>
   <script src="/assets/js/sigma.min.js"></script>
+  <script src="/assets/js/sigma.plugins.animate.js"></script>
   <script src="/assets/js/surprise.js"></script>
 
   <script>
@@ -280,8 +284,63 @@
     $('.menu-button').click(function() {
       $('.menu', _header).toggleClass('hidden');
     });
-  });
 
+    // Sigma showcase in title:
+    $.ajax({
+      url: 'assets/data/les_miserables.json',
+      success: function(graph) {
+        var L = 15;
+
+        // Sort nodes:
+        graph.nodes = graph.nodes.sort(function(a, b) {
+          return +(b.size - a.size) * 2 - 1;
+        });
+
+        // Set views:
+        graph.nodes.forEach(function(node, i) {
+          node.grid_x = 100 * (i % L);
+          node.grid_y = 100 * Math.floor(i / L);
+          node.grid_color = '#ccc';
+          node.x = node.file_x = node.x;
+          node.y = node.file_y = node.y;
+          node.color = node.file_color = node.color;
+        });
+
+        // Initialize sigma:
+        var s = new sigma({
+          graph: graph,
+          container: document.getElementById('sigma-title'),
+          settings: {
+            enableCamera: false,
+            enableHovering: false,
+            drawLabels: false,
+            animationsTime: 500,
+            mouseEnabled: false
+          }
+        });
+
+        $('#title').bind('mouseenter', function() {
+          sigma.plugins.animate(
+            s,
+            {
+              color: 'grid_color',
+              x: 'grid_x',
+              y: 'grid_y'
+            }
+          );
+        }).bind('mouseleave', function() {
+          sigma.plugins.animate(
+            s,
+            {
+              color: 'file_color',
+              x: 'file_x',
+              y: 'file_y'
+            }
+          );
+        });
+      }
+    })
+  });
   </script>
 <!-- End Document
 ================================================== -->
