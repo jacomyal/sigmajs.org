@@ -33,6 +33,10 @@ h1,h2,h3,h4,h5{
   font-family: 'Lato', sans-serif;
 }
 
+.sigma {
+  font-family: 'Capsuula', 'Lato', sans-serif;
+}
+
 hr {
   color: #cccac4;
   background-color: #cccac4;
@@ -282,6 +286,16 @@ a.entry.selected, a.entry:hover{
 	    font-weight: normal;
 	    font-style: normal; }
 */
+@font-face {
+  font-family: 'Capsuula';
+  src: url('../fonts/Capsuula-webfont.eot');
+  src: url('../fonts/Capsuula-webfont.eot?iefix') format('eot'),
+       url('../fonts/Capsuula-webfont.woff') format('woff'),
+       url('../fonts/Capsuula-webfont.ttf') format('truetype'),
+       url('../fonts/Capsuula-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* #Dummy-stuffs
 ================================================== */
