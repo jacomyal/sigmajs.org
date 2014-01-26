@@ -91,6 +91,7 @@ footer {
 .box {
   background-color: #ffffff;
   height: 260px;
+  overflow: auto;
 }
 
 .bottom {

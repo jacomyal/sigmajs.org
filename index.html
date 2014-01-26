@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/skeleton.css">
   <link rel="stylesheet" href="assets/css/layout.css">
-
+  <link rel="stylesheet" href="assets/css/highlights/default.css">
 
 
   <!--[if lt IE 9]>
@@ -84,15 +84,86 @@
     </div>
     <div class="one-third column">
       <h5>Data</h5>
-      <div class="box"></div>
+      <div class="box">
+<pre><code>{
+  &quot;nodes&quot;: [
+    {
+      &quot;id&quot;: &quot;n0&quot;,
+      &quot;label&quot;: &quot;A node&quot;,
+      &quot;x&quot;: 0,
+      &quot;y&quot;: 0,
+      &quot;size&quot;: 3
+    },
+    {
+      &quot;id&quot;: &quot;n1&quot;,
+      &quot;label&quot;: &quot;Another node&quot;,
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 1,
+      &quot;size&quot;: 2
+    },
+    {
+      &quot;id&quot;: &quot;n2&quot;,
+      &quot;label&quot;: &quot;And a last one&quot;,
+      &quot;x&quot;: 1,
+      &quot;y&quot;: 3,
+      &quot;size&quot;: 1
+    }
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;id&quot;: &quot;e0&quot;,
+      &quot;source&quot;: &quot;n0&quot;,
+      &quot;target&quot;: &quot;n1&quot;
+    },
+    {
+      &quot;id&quot;: &quot;e1&quot;,
+      &quot;source&quot;: &quot;n1&quot;,
+      &quot;target&quot;: &quot;n2&quot;
+    },
+    {
+      &quot;id&quot;: &quot;e2&quot;,
+      &quot;source&quot;: &quot;n2&quot;,
+      &quot;target&quot;: &quot;n0&quot;
+    }
+  ]
+}
+
+</code></pre>
+      </div>
     </div>
     <div class="one-third column">
       <h5>HTML</h5>
-      <div class="box"></div>
+      <div class="box">
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  #container {
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;sigma.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;sigma.parsers.json.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  sigma.parsers.json(&#039;data.json&#039;, {
+    container: &#039;container&#039;,
+    settings: {
+      defaultNodeColor: &#039;#ec5148&#039;
+    }
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
     </div>
     <div class="one-third column">
       <h5>Result</h5>
-      <div class="box"></div>
+      <div class="box" id="sigma-first"></div>
     </div>
   </div>
 
@@ -100,23 +171,22 @@
 
   <div class="container big-bottom" id="features">
     <div class="eight columns">
-      <h3 class="green">Get Features</h3>
+      <h3 class="green">Features</h3>
     </div>
     <div class="eight columns">
-      <h5 class="green">The JavaScript way to draw networks</h5>
-      <p>Sigma makes network exploration easy and even fun to do. It's simple, elegant, and designed so that you spend less time making your hard work and more time designing.</p>
+      <p><span class="sigma">sigma<span class="red">js</span></span> is basically a graph model and a controller, that binds renderers to the graph. Currently, it has a Canvas and a WebGL renderers. Also, it is possible for the user to drag and drop the graph and to zoom with the mouse wheel. And has touch supports.</p>
     </div>
     <div class="one-third column">
-      <h5>Data</h5>
-      <div class="box"></div>
+      <h5>Use and contribute</h5>
+      <p>The source code is tested, commented and documented in the wiki. Also, sigmajs is released under the MIT Licence and published on Github.</p>
     </div>
     <div class="one-third column">
-      <h5>HTML</h5>
-      <div class="box"></div>
+      <h5>Customize</h5>
+      <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of different settings to make it easy to customize how to draw and interact with networks. And you can also directly add your own function to your scripts to render nodes and edges <strong>the exact way you want</strong>.</p>
     </div>
     <div class="one-third column">
-      <h5>Result</h5>
-      <div class="box"></div>
+      <h5>Resources</h5>
+      <p>The documentation, examples and plugins provided in the core repository bring a lot of different resources to find out how to implement the interactions you want for your applications.</p>
     </div>
   </div>
 
@@ -226,9 +296,12 @@
   <script src="/assets/js/sigma.min.js"></script>
   <script src="/assets/js/sigma.plugins.animate.js"></script>
   <script src="/assets/js/surprise.js"></script>
+  <script src="/assets/js/highlight.pack.js"></script>
 
   <script>
   $(document).ready(function() {
+    hljs.initHighlightingOnLoad();
+
     var _header = $('header'),
         _footer = $('footer'),
         _belowFooter = $('.below-the-footer'),
@@ -339,7 +412,58 @@
           );
         });
       }
-    })
+    });
+
+    // Sigma first use case:
+    new sigma({
+      container: $('.box#sigma-first')[0],
+      graph: {
+        "nodes": [
+          {
+            "id": "n0",
+            "label": "A node",
+            "x": 0,
+            "y": 0,
+            "size": 3
+          },
+          {
+            "id": "n1",
+            "label": "Another node",
+            "x": 3,
+            "y": 1,
+            "size": 2
+          },
+          {
+            "id": "n2",
+            "label": "And a last one",
+            "x": 1,
+            "y": 3,
+            "size": 1
+          }
+        ],
+        "edges": [
+          {
+            "id": "e0",
+            "source": "n0",
+            "target": "n1"
+          },
+          {
+            "id": "e1",
+            "source": "n1",
+            "target": "n2"
+          },
+          {
+            "id": "e2",
+            "source": "n2",
+            "target": "n0"
+          }
+        ]
+      },
+      settings: {
+        defaultNodeColor: '#ec5148',
+        sideMargin: 2
+      }
+    });
   });
   </script>
 <!-- End Document
