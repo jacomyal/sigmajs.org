@@ -388,7 +388,10 @@
         // Initialize sigma:
         var s = new sigma({
           graph: graph,
-          container: document.getElementById('sigma-title'),
+          renderer: {
+            container: document.getElementById('sigma-title'),
+            type: 'canvas'
+          },
           settings: {
             enableCamera: false,
             enableHovering: false,
