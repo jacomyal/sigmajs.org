@@ -345,6 +345,7 @@
 
     // Sigma showcase in title:
     $.ajax({
+      dataType: 'json',
       url: 'assets/data/les_miserables.json',
       success: function(graph) {
         var lines = 15,
