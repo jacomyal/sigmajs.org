@@ -27,6 +27,7 @@ body{
   height:100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5{
@@ -64,9 +65,9 @@ header .shadow {
   width: 100%;
   bottom: 0px;
   z-index:0;
-    -webkit-transition: bottom 210ms ease-out; 
-   -moz-transition: bottom 210ms ease-out; 
-     -o-transition: bottom 210ms ease-out; 
+    -webkit-transition: bottom 210ms ease-out;
+   -moz-transition: bottom 210ms ease-out;
+     -o-transition: bottom 210ms ease-out;
         transition: bottom 210ms ease-out;
 }
 
@@ -335,9 +336,9 @@ a.entry {
   text-transform: uppercase;
   text-decoration: none;
   padding: 8px 12px;
-  -webkit-transition: background-color 200ms ease-out; 
-   -moz-transition: background-color 200ms ease-out; 
-     -o-transition: background-color 200ms ease-out; 
+  -webkit-transition: background-color 200ms ease-out;
+   -moz-transition: background-color 200ms ease-out;
+     -o-transition: background-color 200ms ease-out;
         transition: background-color 200ms ease-out; /* easeInOutCubic */
 }
 
