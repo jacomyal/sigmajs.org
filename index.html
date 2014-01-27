@@ -49,16 +49,18 @@
     <div class="shadow-wrap"></div>
     <div class="shadow"></div>
     <div class="container wrapper">
-      <div class="six columns">
+      <div class="six columns menu-toggler hidden">
         <h5 class="sigma title">sigma<span class="red">js</span></h5>
         <div class="menu-button right-aligned fa fa-bars fa-2"></div>
       </div>
       <div class="ten columns right-aligned menu hidden">
-        <a href="#get-started" class="entry">get started</a>
-        <a href="#features" class="entry">features</a>
-        <a href="#issues" class="entry">issues</a>
-        <a href="#api" class="entry">api</a>
-        <a href="#docs" class="entry">docs</a>
+        <div class="wrapper">
+          <a href="#get-started" class="entry">get started</a>
+          <a href="#features" class="entry">features</a>
+          <a href="#issues" class="entry">issues</a>
+          <a href="#api" class="entry">api</a>
+          <a href="#docs" class="entry">docs</a>
+        </div>
       </div>
     </div>
   </header>
@@ -80,12 +82,12 @@
 
 
 
-  <div class="container big-bottom" id="get-started">
+  <div class="container big-bottom section" id="get-started">
     <div class="eight columns">
       <h3 class="green">Get started with sigma</h3>
     </div>
     <div class="eight columns">
-      <h5 class="green">The JavaScript way to draw networks</h5>
+      <h4 class="green">The JavaScript way to draw networks</h4>
       <p>Sigma makes network exploration easy and even fun to do. It's simple, elegant, and designed so that you spend less time making your hard work and more time designing.</p>
     </div>
     <div class="one-third column">
@@ -171,11 +173,12 @@
       <h5>Result</h5>
       <div class="box" id="sigma-first"></div>
     </div>
+    <div class="line"></div>
   </div>
 
 
 
-  <div class="container big-bottom" id="features">
+  <div class="container big-bottom section" id="features">
     <div class="eight columns">
       <h3 class="green">Features</h3>
     </div>
@@ -194,6 +197,7 @@
       <h5>Resources</h5>
       <p>The documentation, examples and plugins provided in the core repository bring a lot of different resources to find out how to implement the interactions you want for your applications.</p>
     </div>
+    <div class="line"></div>
   </div>
 
 
@@ -362,6 +366,7 @@
 
     $('.menu-button').click(function() {
       $('.menu', _header).toggleClass('hidden');
+      $(this).closest('.menu-toggler').toggleClass('hidden');
     });
 
     // Sigma showcase in title:
