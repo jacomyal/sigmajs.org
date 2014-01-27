@@ -40,7 +40,6 @@
 
 </head>
 <body class="bg-beige">
-<div id="wrapper">
 
 
 
@@ -51,7 +50,7 @@
     <div class="shadow"></div>
     <div class="container wrapper">
       <div class="six columns menu-toggler">
-        <h5 class="sigma title">sigma<span class="red">js</span></h5>
+        <a href="#banner"><h5 class="sigma title">sigma<span class="red">js</span></h5></a>
         <div class="menu-button right-aligned fa fa-bars fa-2"></div>
       </div>
       <div class="ten columns right-aligned menu">
@@ -66,7 +65,7 @@
     </div>
   </header>
 
-  <div class="splash container big-bottom">
+  <div class="splash container big-bottom" id="banner">
     <div id="title" class="sixteen columns center-aligned big-bottom" style="position: relative">
       <div id="sigma-title"></div>
       <div class="title">
@@ -95,7 +94,7 @@
       <h3 class="green">Get started with sigma.</h3>
     </div>
     <div class="description eight columns">
-      <p>The following example .</p>
+      <p>The following example shows how simple it is to use sigma to display a JSON encoded graph file.</p>
     </div>
     <div class="one-third column">
       <h5>Data</h5>
@@ -187,24 +186,39 @@
 
   <div class="container big-bottom section" id="features">
     <div class="eight columns">
-      <h3 class="headline green">Features, like drag &amp; drop, canvas/webgl renderers ... </h3>
+      <h3 class="headline green">What it does</h3>
     </div>
     <div class="description eight columns">
-      <h4 class="green">The MGC approach</h4>
-      <p><span class="sigma">sigma<span class="red">js</span></span> is basically a graph model and a controller, that binds renderers to the graph. Currently, it has a Canvas and a WebGL renderers. Also, it is possible for the user to <b>drag and drop</b> the graph and to zoom with the mouse wheel. And has touch supports.</p>
+      <h4 class="green"></h4>
+      <p><span class="sigma">sigma<span class="red">js</span></span> aims to help you display networks on the Web, from simple interactive publications of networks to rich Web applications featuring dynamic networks exploration.</p>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline">Display a network</h5>
+      <p>You can just instanciate sigma by giving it the data and the DOM container, and it works. And for <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.json">JSON</a> or <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.gexf">GEXF</a> encoded graphs, the related plugin will deal with loading and parsing the file.</p>
     </div>
     <div class="one-third column">
-      <h5 class="underline">Use and contribute</h5>
-      <p>The source code is tested, commented and documented in the wiki. Also, sigmajs is released under the MIT Licence and published on Github.</p>
+      <h5 class="underline">Add some basic interaction</h5>
+      <p>Update the data and refresh the drawing when you want. Bind custom functions to sigma's events to adapt the interactions to the needs of your application.</p>
     </div>
     <div class="one-third column">
-      <h5 class="underline">Customize</h5>
+      <h5 class="underline">Develop and use plugins</h5>
+      <p>For more complex use cases, it is possible to develop and use plugins that add features to sigma. Some are already available <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins">on the repository</a>, for <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.plugins.animate">animating the graph</a> or apply a <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.layout.forceAtlas2">force-directed layout</a> to your graph.</p>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline">Customize the rendering</h5>
       <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of different settings to make it easy to customize how to draw and interact with networks. And you can also directly add your own function to your scripts to render nodes and edges <strong>the exact way you want</strong>.</p>
     </div>
     <div class="one-third column">
-      <h5 class="underline">Resources</h5>
+      <h5 class="underline">Use and contribute</h5>
+      <p>The source code is tested, commented and documented in the wiki. Also, sigmajs is released under the MIT Licence and published on Github, and contributions are welcome.</p>
+    </div>
+    <div class="one-third column">
+      <h5 class="underline">Feeling a bit lost?</h5>
       <p>The documentation, examples and plugins provided in the core repository bring a lot of different resources to find out how to implement the interactions you want for your applications.</p>
     </div>
+
     <div class="line"></div>
   </div>
 
@@ -298,9 +312,10 @@
       <div class="four columns">
         <a class="boo" href="http://medialab.sciences-po.fr">SciencesPo - médialab</a>
       </div>
-
-
+    </div>
   </footer>
+
+
   <div class="below-the-footer bg-red">
     <div class="container">
       <div class="sixteen columns">
@@ -334,18 +349,8 @@
         _footer = $('footer'),
         _belowFooter = $('.below-the-footer'),
         _config = {
-          margin: 50
+          headerHeight: 63
         };
-
-    // Deal with wrapper:
-    // $('body').css('overflow', 'hidden');
-    // _wrapper.width($(window).width() + 40).css({
-    //   'padding-right': 40,
-    //   overflow: 'auto'
-    // });
-    // $(window).resize(function() {
-    //   _wrapper.width($(window).width() + 40);
-    // });
 
     // Dock the header to the top of the window when scrolled past the banner.
     _header.scrollToFixed();
@@ -354,15 +359,15 @@
     $('footer').scrollToFixed({
       bottom: 0,
       limit: function() {
-        console.log(_belowFooter.offset().top, _footer.outerHeight());
         return _belowFooter.offset().top - _footer.outerHeight();
       }
     });
 
     // Deal with the menu:
     $('header a[href^="#"]').click(function(e) {
+      $('.menu', _header).removeClass('visible');
       $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top - _header.height() - _config.margin
+        scrollTop: $($(this).attr('href')).offset().top - _config.headerHeight
       });
       return false;
     });
@@ -402,7 +407,8 @@
     $.ajax({
       url: 'assets/data/les_miserables.json',
       success: function(graph) {
-        var L = 15;
+        var lines = 15,
+            prefix = 'file_';
 
         // Sort nodes:
         graph.nodes = graph.nodes.sort(function(a, b) {
@@ -411,8 +417,8 @@
 
         // Set views:
         graph.nodes.forEach(function(node, i) {
-          node.grid_x = 100 * (i % L);
-          node.grid_y = 100 * Math.floor(i / L);
+          node.grid_x = 100 * (i % lines);
+          node.grid_y = 100 * Math.floor(i / lines);
           node.grid_color = '#ccc';
           node.x = node.file_x = node.x;
           node.y = node.file_y = node.y;
@@ -429,30 +435,32 @@
           settings: {
             enableCamera: false,
             enableHovering: false,
+            mouseEnabled: false,
             drawLabels: false,
-            animationsTime: 500,
-            mouseEnabled: false
+            animationsTime: 500
           }
         });
 
+        function animate(p) {
+          if (p !== prefix) {
+            prefix = p || (prefix === 'grid_' ? 'file_' : 'grid_');
+            sigma.plugins.animate(
+              s,
+              {
+                color: prefix + 'color',
+                x: prefix + 'x',
+                y: prefix + 'y'
+              }
+            );
+          }
+        }
+
         $('#title').bind('mouseenter', function() {
-          sigma.plugins.animate(
-            s,
-            {
-              color: 'grid_color',
-              x: 'grid_x',
-              y: 'grid_y'
-            }
-          );
+          animate('grid_');
         }).bind('mouseleave', function() {
-          sigma.plugins.animate(
-            s,
-            {
-              color: 'file_color',
-              x: 'file_x',
-              y: 'file_y'
-            }
-          );
+          animate('file_');
+        }).bind('touchstart', function() {
+          animate();
         });
       }
     });
@@ -511,6 +519,5 @@
   </script>
 <!-- End Document
 ================================================== -->
-</div>
 </body>
 </html>
