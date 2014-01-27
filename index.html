@@ -65,7 +65,7 @@
     </div>
   </header>
 
-  <div class="container big-bottom">
+  <div class="splash container big-bottom">
     <div id="title" class="sixteen columns center-aligned big-bottom" style="position: relative">
       <div id="sigma-title"></div>
       <div class="title">
@@ -77,16 +77,14 @@
         <a class="boo" id="link-to-download" href="#">download<i class="fa fa-download"></i></a>
       </div>
     </div>
-    <hr />
+    <div class="line"></div>
   </div>
 
-
-
-  <div class="container big-bottom section" id="get-started">
-    <div class="eight columns">
-      <h3 class="green">Get started with sigma</h3>
+  <div class="section container big-bottom" id="get-started">
+    <div class="headline eight columns">
+      <h3 class="green">Get started with sigma.</h3>
     </div>
-    <div class="eight columns">
+    <div class="description eight columns">
       <h4 class="green">The JavaScript way to draw networks</h4>
       <p>Sigma makes network exploration easy and even fun to do. It's simple, elegant, and designed so that you spend less time making your hard work and more time designing.</p>
     </div>
@@ -180,21 +178,22 @@
 
   <div class="container big-bottom section" id="features">
     <div class="eight columns">
-      <h3 class="green">Features</h3>
+      <h3 class="headline green">Features, like drag &amp; drop, canvas/webgl renderers ... </h3>
     </div>
-    <div class="eight columns">
-      <p><span class="sigma">sigma<span class="red">js</span></span> is basically a graph model and a controller, that binds renderers to the graph. Currently, it has a Canvas and a WebGL renderers. Also, it is possible for the user to drag and drop the graph and to zoom with the mouse wheel. And has touch supports.</p>
+    <div class="description eight columns">
+      <h4 class="green">The MGC approach</h4>
+      <p><span class="sigma">sigma<span class="red">js</span></span> is basically a graph model and a controller, that binds renderers to the graph. Currently, it has a Canvas and a WebGL renderers. Also, it is possible for the user to <b>drag and drop</b> the graph and to zoom with the mouse wheel. And has touch supports.</p>
     </div>
     <div class="one-third column">
-      <h5>Use and contribute</h5>
+      <h5 class="underline">Use and contribute</h5>
       <p>The source code is tested, commented and documented in the wiki. Also, sigmajs is released under the MIT Licence and published on Github.</p>
     </div>
     <div class="one-third column">
-      <h5>Customize</h5>
+      <h5 class="underline">Customize</h5>
       <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of different settings to make it easy to customize how to draw and interact with networks. And you can also directly add your own function to your scripts to render nodes and edges <strong>the exact way you want</strong>.</p>
     </div>
     <div class="one-third column">
-      <h5>Resources</h5>
+      <h5 class="underline">Resources</h5>
       <p>The documentation, examples and plugins provided in the core repository bring a lot of different resources to find out how to implement the interactions you want for your applications.</p>
     </div>
     <div class="line"></div>
@@ -275,7 +274,9 @@
 
 
   <footer class="bg-red">
-    <div class="container">
+    <div class="shadow-wrap"></div>
+    <div class="shadow "></div>
+    <div class="container wrapper">
       <div class="four columns">
         <a class="boo" href="https://github.com/jacomyal/sigma.js">fork on github <i class="fa fa-github"></i></a>
       </div>
@@ -294,8 +295,15 @@
   <div class="below-the-footer bg-red">
     <div class="container">
       <div class="sixteen columns">
-        <p>sigmajs is developed by Alexis Jacomy, with the help of Guillaume Plique</p>
-        <p>design by Daniele Guido</p>
+        <div id="disclaimer">
+          <p>sigmajs is developed by <span class="author">Alexis Jacomy</span>, with the help of <span class="author">Guillaume Plique</span>. </p>
+          <p>design by <span class="author">Daniele Guido</span></p>
+          A special thanks to <span class="author">medialab Sciences-Po</span> Paris
+        </div> 
+        <div id="konami">
+          <img src="/assets/img/konami.png"/>
+        </div>
+        
       </div>
     </div>
   </div>
