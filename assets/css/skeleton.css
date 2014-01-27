@@ -76,7 +76,7 @@
 
     /* Note: Design for a width of 768px */
 
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
+    @media only screen and (min-width: 768px) and (max-width: 989px) {
         .container                                  { width: 768px; }
         .container .column,
         .container .columns                         { margin-left: 10px; margin-right: 10px;  }
