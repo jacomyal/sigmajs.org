@@ -116,6 +116,15 @@ margin-left: -202px;
   right: 0px;
 }
 
+#version {
+  position: absolute;
+  text-align: center;
+  width: 70px;
+  left: 50%;
+  margin-left: -26px;
+  margin-top: 4px;
+}
+
 .splash .line{
   padding-top: 24px;
 }
@@ -127,14 +136,10 @@ margin-left: -202px;
 
 #title div.title {
   position: absolute;
-  bottom: 30px;
+  bottom: 54px;
   left: 50%;
   width: 300px;
   margin-left: -150px;
-}
-
-#title h5{
-  background: #f9f7ed;
 }
 
 #title h1{
@@ -183,7 +188,7 @@ footer a.boo {
 
 footer a.boo:hover, footer a.boo:active {
 
-  
+
 }
 
 
@@ -418,7 +423,7 @@ a.boo {
   -webkit-transition: background-color 200ms ease-out;
    -moz-transition: background-color 200ms ease-out;
      -o-transition: background-color 200ms ease-out;
-        transition: background-color 200ms ease-out; 
+        transition: background-color 200ms ease-out;
 
 }
 

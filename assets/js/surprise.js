@@ -262,7 +262,7 @@
         top: _mouseY - _radius * scale,
         left: _mouseX - _radius * scale,
         'border-radius': _radius * scale,
-        'background-color': _spaceMode ? '#f99' : '#9cf'
+        'background-color': _spaceMode ? '#a22d27' : '#aac789'
       });
     }
 
@@ -328,6 +328,7 @@
     });
     _dom.on('DOMMouseScroll mousewheel', function(e) {
       _radius *= sigma.utils.getDelta(e.originalEvent) < 0 ? 1 / _wheelRatio : _wheelRatio;
+      e.preventDefault();
     });
     $(document).on('keydown', function(e) {
       _spaceMode = (e.which == 32) ? true : _spaceMode;
@@ -361,6 +362,11 @@
           '<div id="disc"></div>' +
           '<div id="ground"></div>' +
         '</div>' +
+        '<ul class="caption">' +
+          '<li>CLICK: Add a node, linked to nodes in the mouse area</li>' +
+          '<li>SPACEBAR + CLICK: Remove all nodes in the mouse area</li>' +
+          '<li>MOUSEWHEEL: Change the size of the mouse area</li>' +
+        '</ul>' +
         '<div id="close-konami" class="fa fa-times"></div>' +
       '</div>'
     ).css('height', 0).prependTo($('.below-the-footer .columns')).animate({
