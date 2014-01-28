@@ -72,6 +72,10 @@ header .shadow-wrap {
   background-color: #ffffff;
 }
 
+header .container .columns.menu-toggler a{
+  text-decoration: none;
+}
+
 #intro p {
   font-size: 2.8rem;
   line-height: 42px;
@@ -206,6 +210,10 @@ footer a.boo:hover, footer a.boo:active {
   margin: 6px 0;
 }
 
+.section p {
+  margin: 0;
+}
+
 .section h4 {
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -217,9 +225,12 @@ footer a.boo:hover, footer a.boo:active {
 }
 
 .section h5.underline {
-  border-bottom: 1px solid #437356;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
+  color: #437356;
+  background: #f4f0e4;
+  margin: 12px 0 12px 0;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-weight: 700;
 }
 
 .section h5.underline .fa {
@@ -236,7 +247,7 @@ footer a.boo:hover, footer a.boo:active {
 }
 
 .section .headline {
-
+  color: #ec5148;
 }
 
 .section .description p{
@@ -247,13 +258,17 @@ footer a.boo:hover, footer a.boo:active {
   margin-bottom: 24px;
 }
 
+.section .textbox {
+  margin: 12px;
+}
+
 .line{
   clear: both;
   display: block;
   width: 100%;
   margin: 0;
   padding: 36px 0 0 0;
-  border-bottom: 1px solid #ec5148;
+  border-bottom: 1px solid #aac789;
   background: transparent;
 }
 
