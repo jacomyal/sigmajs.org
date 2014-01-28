@@ -57,7 +57,6 @@ header.scrolled {
   border-bottom: 1px #f4f0e4 solid;
 }
 
-
 header .shadow{
   bottom: 0px;
   z-index: 0;
@@ -81,7 +80,6 @@ header .container .columns.menu-toggler a{
   line-height: 42px;
 }
 
-
 header .wrapper, footer .wrapper{
   z-index: 2;
   position: relative;
@@ -91,19 +89,22 @@ header.scrolled .shadow{
   bottom: -6px;
 }
 
+#banner {
+  overflow: hidden;
+}
+
 #start{
   position: absolute;
-left: 50%;
-bottom: 22px;
-width: 386px;
-height: 36px;
-margin-left: -202px;
+  left: 50%;
+  bottom: 22px;
+  width: 386px;
+  height: 36px;
+  margin-left: -202px;
 }
 
 #start .boo{
   padding: 6px 8px;
   border-radius: 2px;
-  display: inline-block;
 }
 
 #link-to-tutorial{
@@ -188,16 +189,13 @@ footer a.boo {
 
 footer a.boo:hover, footer a.boo:active {
 
-
 }
-
 
 .below-the-footer {
   padding: 24px 0;
   color: #ffffff;
   clear: both;
 }
-
 
 #disclaimer{
   color: #f9eedc;
@@ -294,7 +292,6 @@ footer a.boo:hover, footer a.boo:active {
   height: 6px;
   width: 100%;
   z-index:0;
-
 }
 
 .shadow-wrap{
@@ -531,7 +528,11 @@ a.entry.selected, a.entry:hover{
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+    a.boo.no-mobile {
+      display: none;
+    }
+  }
 
 
 /* #Font-Face
