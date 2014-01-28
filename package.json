@@ -1,7 +1,7 @@
 {
-  "name": "sigmajs",
+  "name": "sigmajs.org",
   "version": "1.0.0",
-  "description": "sigma graph exploration library",
+  "description": "sigma.js website",
   "main": "Gruntfile.js",
   "dependencies": {
     "assemble": "~0.4.35",
@@ -22,7 +22,7 @@
     "exploration"
   ],
   "author": "Jacomyal",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jacomyal/sigmajs.org/issues"
   }
