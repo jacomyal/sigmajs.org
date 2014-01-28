@@ -1,4 +1,3 @@
-
 (function() {
   'use strict';
 
@@ -185,7 +184,7 @@
   function initialize() {
     _s = new sigma({
       renderer: {
-        container: document.getElementById('easter-container'),
+        container: document.getElementById('konami-container'),
         type: 'canvas'
       },
       settings: {
@@ -199,7 +198,7 @@
         edgeColor: 'default'
       }
     });
-    _dom = $('#easter-container canvas:last-child');
+    _dom = $('#konami-container canvas:last-child');
     _disc = $('#disc');
     _ground = $('#ground');
     _c = _s.cameras[0];
@@ -382,13 +381,13 @@
     $(document).on('keyup', function(e) {
       _spaceMode = e.which == 32 ? false : _spaceMode;
     });
-    $('#close-easter').on('click', function() {
+    $('#close-konami').on('click', function() {
       window.cancelAnimationFrame(_frame);
       _s.kill();
       _s = null;
       _nId = 0;
       _eId = 0;
-      $('#easter').remove();
+      $('#konami').remove();
     });
   }
 
@@ -399,20 +398,19 @@
    * INITIALIZATION:
    * ***************
    */
-  var easter = new Konami(function() {
+  var konami = new Konami(function() {
     if (_s)
       return;
 
     $(
-      '<div id="easter">' +
-        '<div class="background"></div>' +
-        '<div id="easter-container">' +
+      '<div id="konami">' +
+        '<div id="konami-container">' +
           '<div id="disc"></div>' +
           '<div id="ground"></div>' +
         '</div>' +
-        '<div id="close-easter" class="fa fa-times"></div>' +
+        '<div id="close-konami" class="fa fa-times"></div>' +
       '</div>'
-    ).appendTo($('body'));
+    ).appendTo($('.below-the-footer .columns'));
     initialize();
   });
 })();
