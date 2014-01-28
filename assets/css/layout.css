@@ -147,7 +147,7 @@ margin-left: -202px;
 }
 
 footer {
-  padding: 12px 0;
+  padding: 0;
   color: #ffffff;
   clear: both;
 }
@@ -173,6 +173,15 @@ footer.scroll-to-fixed-fixed .shadow{
   top: -6px;
 }
 
+footer a.boo {
+  padding: 12px 0;
+}
+
+footer a.boo:hover, footer a.boo:active {
+
+  
+}
+
 
 .below-the-footer {
   padding: 24px 0;
@@ -183,6 +192,7 @@ footer.scroll-to-fixed-fixed .shadow{
 #konami {
   text-align: center;
   border-bottom: 72px solid #c9423f;
+  overflow: hidden
 }
 
 #konami img{
@@ -215,10 +225,15 @@ footer.scroll-to-fixed-fixed .shadow{
   text-transform: uppercase;
 }
 
-.section h5.underline{
+.section h5.underline {
   border-bottom: 1px solid #437356;
   padding-bottom: 12px;
   margin-bottom: 12px;
+}
+
+.section h5.underline .fa {
+  float: right;
+  line-height: 24px;
 }
 
 .section .box {
@@ -349,11 +364,27 @@ footer.scroll-to-fixed-fixed .shadow{
     height: 196px;
   }
 
-  header .menu .wrapper{
+  header .menu .wrapper {
     margin-top: 24px;
     position: absolute;
     bottom: 6px;
     width: 100%;
+  }
+
+  footer .container .four.columns {
+    width: 25%;
+  }
+
+  footer a.boo .label {
+    display: none
+  }
+
+  footer a.boo .fa {
+    padding-left: 0;
+  }
+
+  footer .mobile-only {
+    display: block;
   }
 }
 
@@ -378,10 +409,16 @@ a.boo {
   color: #f9eedc;
   text-align: center;
   display: block;
+  -webkit-transition: background-color 200ms ease-out;
+   -moz-transition: background-color 200ms ease-out;
+     -o-transition: background-color 200ms ease-out;
+        transition: background-color 200ms ease-out; 
+
 }
 
 a.boo:hover, a.boo:active {
   color: white;
+  background-color: #c9423f;
 }
 
 a.boo .fa {
@@ -526,4 +563,8 @@ a.entry.selected, a.entry:hover{
 
 .center-aligned{
   text-align: center;
+}
+
+.mobile-only{
+  display: none;
 }

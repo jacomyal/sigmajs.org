@@ -6,6 +6,7 @@ module.exports = function(grunt) {
         assets: "assets",// data:   "config.json" 
         layout: "layout/default.hbs",
         partials: "partials/*.hbs",
+        data: "contents/*.json"
       },
       dist:{
         files: {

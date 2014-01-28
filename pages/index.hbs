@@ -24,6 +24,154 @@ title: getting started
   </div>
 </div>
 
+  <div class="container big-bottom section" id="get-started">
+    <div class="headline eight columns">
+      <h3 class="green">Get started with sigma.</h3>
+    </div>
+    <div class="description eight columns">
+      <p>The following example shows how simple it is to use sigma to display a JSON encoded graph file.</p>
+    </div>
+    <div class="one-third column">
+      <h5>Data</h5>
+      <div class="box">
+<pre><code>{
+  &quot;nodes&quot;: [
+    {
+      &quot;id&quot;: &quot;n0&quot;,
+      &quot;label&quot;: &quot;A node&quot;,
+      &quot;x&quot;: 0,
+      &quot;y&quot;: 0,
+      &quot;size&quot;: 3
+    },
+    {
+      &quot;id&quot;: &quot;n1&quot;,
+      &quot;label&quot;: &quot;Another node&quot;,
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 1,
+      &quot;size&quot;: 2
+    },
+    {
+      &quot;id&quot;: &quot;n2&quot;,
+      &quot;label&quot;: &quot;And a last one&quot;,
+      &quot;x&quot;: 1,
+      &quot;y&quot;: 3,
+      &quot;size&quot;: 1
+    }
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;id&quot;: &quot;e0&quot;,
+      &quot;source&quot;: &quot;n0&quot;,
+      &quot;target&quot;: &quot;n1&quot;
+    },
+    {
+      &quot;id&quot;: &quot;e1&quot;,
+      &quot;source&quot;: &quot;n1&quot;,
+      &quot;target&quot;: &quot;n2&quot;
+    },
+    {
+      &quot;id&quot;: &quot;e2&quot;,
+      &quot;source&quot;: &quot;n2&quot;,
+      &quot;target&quot;: &quot;n0&quot;
+    }
+  ]
+}
+
+</code></pre>
+      </div>
+    </div>
+    <div class="one-third column">
+      <h5>HTML</h5>
+      <div class="box">
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  #container {
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;sigma.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;sigma.parsers.json.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  sigma.parsers.json(&#039;data.json&#039;, {
+    container: &#039;container&#039;,
+    settings: {
+      defaultNodeColor: &#039;#ec5148&#039;
+    }
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+    </div>
+    <div class="one-third column">
+      <h5>Result</h5>
+      <div class="box" id="sigma-first"></div>
+    </div>
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom section" id="features">
+    <div class="eight columns">
+      <h3 class="headline green">Features.</h3>
+    </div>
+    <div class="description eight columns">
+      <h4 class="green">From beginners to advanced users.</h4>
+      <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of built-in features, such as Canvas and WebGL renderers or mouse and touch support, to make networks manipulation on Web pages smooth and fast for the user..</p>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-pencil green"></i> Customize the rendering</h5>
+      <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of different settings to make it easy to customize how to draw and interact with networks. And you can also directly add your own function to your scripts to render nodes and edges <strong>the exact way you want</strong>.</p>
+    </div>
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-thumbs-o-up green"></i> Use and contribute</h5>
+      <p>The source code is tested, commented and documented in the wiki. Also, sigmajs is released under the MIT Licence and published on Github, and contributions are welcome.</p>
+    </div>
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-puzzle-piece green"></i> Resources</h5>
+      <p>The documentation, examples and plugins provided in the core repository bring a lot of different resources to find out how to implement the interactions you want for your applications.</p>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom section" id="difficulty">
+    <div class="eight columns">
+      <h3 class="headline green">How hard it is.</h3>
+    </div>
+    <div class="description eight columns">
+      <h4 class="green">From beginners to advanced users.</h4>
+      <p><span class="sigma">sigma<span class="red">js</span></span> aims to help you display networks on the Web, from simple interactive publications of networks to rich Web applications featuring dynamic networks exploration.</p>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-coffee green"></i> Display a network</h5>
+      <p>You can just instanciate sigma by giving it the data and the DOM container, and it works. And for <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.json">JSON</a> or <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.gexf">GEXF</a> encoded graphs, the related plugin will deal with loading and parsing the file.</p>
+    </div>
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-coffee green"></i><i class="fa fa-coffee green"></i> Add some basic interaction</h5>
+      <p>Update the data and refresh the drawing when you want. Bind custom functions to sigma's events to adapt the interactions to the needs of your application.</p>
+    </div>
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-coffee green"></i><i class="fa fa-coffee green"></i><i class="fa fa-coffee green"></i> Develop and use plugins</h5>
+      <p>For more complex use cases, it is possible to develop and use plugins that add features to sigma. Some are already available <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins">on the repository</a>, for <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.plugins.animate">animating the graph</a> or apply a <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.layout.forceAtlas2">force-directed layout</a> to your graph.</p>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+
 <script src="{{assets}}/js/jquery.min.js"></script>
 <script src="{{assets}}/js/jquery-scrolltofixed.js"></script>
 <script src="{{assets}}/js/konami.js"></script>
