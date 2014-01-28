@@ -84,75 +84,16 @@
    * CUSTOM RENDERERS:
    * *****************
    */
-  sigma.canvas.edges.goo = function(e, s, t, ctx, settings) {
-    var color = e.color,
-        p = settings('prefix') || '',
-        edgeColor = settings('edgeColor'),
-        defaultNodeColor = settings('defaultNodeColor'),
-        defaultEdgeColor = settings('defaultEdgeColor'),
-        v,
-        d,
-        p1 = 5 / 6,
-        p2 = 1 / 6;
-
-    if (!color)
-      switch (edgeColor) {
-        case 'source':
-          color = s.color || defaultNodeColor;
-          break;
-        case 'target':
-          color = t.color || defaultNodeColor;
-          break;
-        default:
-          color = defaultEdgeColor;
-          break;
-      }
-
-    d = Math.sqrt(Math.pow(t[p + 'x'] - s[p + 'x'], 2) + Math.pow(t[p + 'y'] - s[p + 'y'], 2));
-    v = {
-      x: (t[p + 'x'] - s[p + 'x']) / d,
-      y: (t[p + 'y'] - s[p + 'y']) / d
-    };
-
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.moveTo(
-      s[p + 'x'] + v.y * s[p + 'size'],
-      s[p + 'y'] - v.x * s[p + 'size']
-    );
-    ctx.bezierCurveTo(
-      s[p + 'x'] * p1 + t[p + 'x'] * p2 + v.y * e[p + 'size'],
-      s[p + 'y'] * p1 + t[p + 'y'] * p2 - v.x * e[p + 'size'],
-      t[p + 'x'] * p1 + s[p + 'x'] * p2 + v.y * e[p + 'size'],
-      t[p + 'y'] * p1 + s[p + 'y'] * p2 - v.x * e[p + 'size'],
-      t[p + 'x'] + v.y * t[p + 'size'],
-      t[p + 'y'] - v.x * t[p + 'size']
-    );
-    ctx.lineTo(
-      t[p + 'x'] - v.y * t[p + 'size'],
-      t[p + 'y'] + v.x * t[p + 'size']
-    );
-    ctx.bezierCurveTo(
-      t[p + 'x'] * p1 + s[p + 'x'] * p2 - v.y * e[p + 'size'],
-      t[p + 'y'] * p1 + s[p + 'y'] * p2 + v.x * e[p + 'size'],
-      s[p + 'x'] * p1 + t[p + 'x'] * p2 - v.y * e[p + 'size'],
-      s[p + 'y'] * p1 + t[p + 'y'] * p2 + v.x * e[p + 'size'],
-      s[p + 'x'] - v.y * s[p + 'size'],
-      s[p + 'y'] + v.x * s[p + 'size']
-    );
-    ctx.closePath();
-    ctx.fill();
-  };
-
   sigma.canvas.nodes.goo = function(node, ctx, settings) {
-    var prefix = settings('prefix') || '';
+    var prefix = settings('prefix') || '',
+        size = node[prefix + 'size'];
 
     ctx.fillStyle = node.color || settings('defaultNodeColor');
     ctx.beginPath();
     ctx.arc(
       node[prefix + 'x'],
       node[prefix + 'y'],
-      node[prefix + 'size'],
+      size,
       0,
       Math.PI * 2,
       true
@@ -160,18 +101,26 @@
     ctx.closePath();
     ctx.fill();
 
-    ctx.fillStyle = '#fff';
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.arc(
-      node[prefix + 'x'],
-      node[prefix + 'y'],
-      node[prefix + 'size'] * 0.5,
-      0,
-      Math.PI * 2,
-      true
+    ctx.moveTo(
+      node[prefix + 'x'] - size / 2,
+      node[prefix + 'y']
     );
-    ctx.closePath();
-    ctx.fill();
+    ctx.lineTo(
+      node[prefix + 'x'] + size / 2,
+      node[prefix + 'y']
+    );
+    ctx.moveTo(
+      node[prefix + 'x'],
+      node[prefix + 'y'] - size / 2
+    );
+    ctx.lineTo(
+      node[prefix + 'x'],
+      node[prefix + 'y'] + size / 2
+    );
+    ctx.stroke();
   };
 
 
@@ -182,6 +131,9 @@
    * **********************
    */
   function initialize() {
+    _nId = 0;
+    _eId = 0;
+
     _s = new sigma({
       renderer: {
         container: document.getElementById('konami-container'),
@@ -193,8 +145,10 @@
         touchEnabled: false,
         nodesPowRatio: 1,
         edgesPowRatio: 1,
-        defaultEdgeColor: '#333',
-        defaultNodeColor: '#333',
+        minEdgeSize: 4,
+        maxEdgeSize: 5,
+        defaultEdgeColor: '#bd413a',
+        defaultNodeColor: '#fae3b4',
         edgeColor: 'default'
       }
     });
@@ -239,19 +193,19 @@
           id: (++_eId) + '',
           source: '1',
           target: '2',
-          type: 'goo'
+          size: 2
         },
         {
           id: (++_eId) + '',
           source: '1',
           target: '3',
-          type: 'goo'
+          size: 2
         },
         {
           id: (++_eId) + '',
           source: '2',
           target: '3',
-          type: 'goo'
+          size: 2
         }
       ]
     });
@@ -362,7 +316,7 @@
             id: (++_eId) + '',
             source: id,
             target: n.id,
-            type: 'goo'
+            size: 2
           });
         else
           _s.graph.dropNode(n.id);
@@ -385,8 +339,6 @@
       window.cancelAnimationFrame(_frame);
       _s.kill();
       _s = null;
-      _nId = 0;
-      _eId = 0;
       $('#konami').remove();
     });
   }
@@ -402,6 +354,7 @@
     if (_s)
       return;
 
+    var isInitialized = false;
     $(
       '<div id="konami">' +
         '<div id="konami-container">' +
@@ -410,7 +363,22 @@
         '</div>' +
         '<div id="close-konami" class="fa fa-times"></div>' +
       '</div>'
-    ).appendTo($('.below-the-footer .columns'));
-    initialize();
+    ).css('height', 0).prependTo($('.below-the-footer .columns')).animate({
+      height: 300
+    }, {
+      duration: 400,
+      complete: function() {
+        $('html, body').animate({
+          scrollTop: $('#konami').offset().top
+        }, {
+          complete: function() {
+            if (!isInitialized) {
+              initialize();
+              isInitialized = true;
+            }
+          }
+        });
+      }
+    });
   });
 })();
