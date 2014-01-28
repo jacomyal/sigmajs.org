@@ -45,16 +45,16 @@
   <div class="shadow"></div>
   <div class="container wrapper">
     <div class="six columns menu-toggler">
-      <a href="#banner"><h5 class="sigma title">sigma<span class="red">js</span></h5></a>
+      <a class="local-link" href="#banner"><h5 class="sigma title">sigma<span class="red">js</span></h5></a>
       <div class="menu-button right-aligned fa fa-bars fa-2"></div>
     </div>
     <div class="ten columns right-aligned menu">
       <div class="wrapper">
-        <a href="#get-started" class="entry">get started</a>
-        <a href="#features" class="entry">features</a>
-        <a href="#usecases" class="entry">use cases</a>
-        <a href="#references" class="entry">references</a>
-        <a href="#tutorial" class="entry">tutorial</a>
+        <a href="#get-started" class="local-link entry">get started</a>
+        <a href="#features" class="local-link entry">features</a>
+        <a href="#usecases" class="local-link entry">use cases</a>
+        <a href="#references" class="local-link entry">references</a>
+        <a href="#tutorial" class="local-link entry">tutorial</a>
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
       <h1 class="sigma">sigma<span class="red">js</span></h1>
     </div>
     <div id="start">
-      <a class="boo blank no-mobile" id="link-to-tutorial" href="#"><i class="fa fa-globe left"></i>have a tutorial</a>
+      <a class="boo blank no-mobile local-link" id="link-to-tutorial" href="#tutorial"><i class="fa fa-globe left"></i>have a tutorial</a>
       <h5 id="version">v1.0.0</h5>
       <a class="boo no-mobile" id="link-to-download" href="#">download<i class="fa fa-download"></i></a>
     </div>
@@ -93,7 +93,7 @@
     </div>
     <div class="one-third column">
       <h5>Data</h5>
-      <div class="box">
+      <div class="box codebox">
 <pre><code>{
   &quot;nodes&quot;: [
     {
@@ -142,7 +142,7 @@
     </div>
     <div class="one-third column">
       <h5>HTML</h5>
-      <div class="box">
+      <div class="box codebox">
 <pre><code>&lt;html&gt;
 &lt;head&gt;
 &lt;style type=&quot;text/css&quot;&gt;
@@ -180,7 +180,6 @@
 
 
   <div class="container big-bottom section" id="features">
-
     <div class="eight columns">
       <h3 class="headline green">Features.</h3>
     </div>
@@ -281,8 +280,145 @@
 
     <div class="sixteen columns">
       <div class="textbox">
-        <p>TODO TOTO TUTU.</p>
+        <p>Let's assume we have a graph, exported in GEXF from Gephi, and we want to display it with sigma. In this tutorial, we will use the graph of character co-occurrences in Victor Hugo’s Les Misérables, available by default in Gephi.</p>
+        <p>But we also want that, when the user clicks on a node, only the clicked node and its neighbors stay colored and with their good size, the other nodes and edges must become grey and small.</p>
       </div>
+    </div>
+
+    <div class="sixteen columns">
+      <h4>1. Load and display the graph</h4>
+      <div class="textbox">
+        <p>Here, let's just assume that in our web page, we have an HTML element with the id "sigma-container" to display our graph. This element's with and height can be whatever we want, and sigma will adapt the elements it adds into it by itself. Also, we must import sigma and add a script tag that will contain the JavaScript code.</p>
+        <p>Then, it's pretty easy: since sigma provides a <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.gexf">plugin</a> dedicated to load and parse GEXF graph files. So, all we have to do is to load the plugin and use it, as described in the plugin's documentation.</p>
+        <p>At this point, the graph should already be displayed, and manipulated with the mouse or touch.</p>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box codebox">
+<pre><code>&lt;!-- [...] --&gt;
+&lt;div id=&quot;sigma-container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;path/to/sigma.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/gexf-parser.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/sigma.parsers.gexf.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  sigma.parsers.gexf(
+    'path/to/les-miserables.gexf',
+    { // Here is the ID of the DOM element that
+      // will contain the graph:
+      container: 'sigma-container'
+    },
+    function(s) {
+      // This function will execute when the graph
+      // is displayed, and s is the related sigma
+      // instance.
+    }
+  );
+&lt;/script&gt;
+&lt;!-- [...] --&gt;</code></pre>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box" id="sigma-tuto-step1"></div>
+    </div>
+
+    <div class="sixteen columns">
+      <h4>2. Bind callbacks to events</h4>
+      <div class="textbox">
+        <p>The first thing we need to do is to facilitate the way to retrieve the neighbors of a node. And the best way to do that is to add a method to the graph model.</p>
+        <p>Basically, the graph model provide a public access to the nodes and edges arrays, but it also maintains some more indexes accessible only from its methods, including every neighbors of each node.</p>
+        <p>Then, we just need to bind functions to some events, that will first modify the colors of the nodes and edges, and then refresh the rendering.</p>
+        <p>And it's done!</p>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box codebox">
+<pre><code>&lt;!-- [...] --&gt;
+&lt;div id=&quot;sigma-container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;path/to/sigma.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/gexf-parser.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/sigma.parsers.gexf.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  // Add a method to the graph model that returns an
+  // object with every neighbors of a node inside:
+  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+    var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
+
+    for (k in index)
+      neighbors[k] = this.nodesIndex[k];
+
+    return neighbors;
+  });
+
+  sigma.parsers.gexf(
+    'path/to/les-miserables.gexf',
+    {
+      container: 'sigma-container'
+    },
+    function(s) {
+      // We first need to save the original colors of our
+      // nodes and edges, like this:
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.color;
+      });
+      s.graph.edges().forEach(function(e) {
+        e.originalColor = e.color;
+      });
+
+      // When a node is clicked, we check for each node
+      // if it is a neighbor of the clicked one. If not,
+      // we set its color as grey, and else, it takes its
+      // original color.
+      // We do the same for the edges, and we only keep
+      // edges that have both extremities colored.
+      s.bind('clickNode', function(e) {
+        var nodeId = e.data.node.id,
+            toKeep = s.graph.neighbors(nodeId);
+        toKeep[nodeId] = e.data.node;
+
+        s.graph.nodes().forEach(function(n) {
+          if (toKeep[n.id])
+            n.color = n.originalColor;
+          else
+            n.color = '#eee';
+        });
+
+        s.graph.edges().forEach(function(e) {
+          if (toKeep[e.source] &amp;&amp; toKeep[e.target])
+            e.color = e.originalColor;
+          else
+            e.color = '#eee';
+        });
+
+        // Since the data has been modified, we need to
+        // call the refresh method to make the colors
+        // update effective.
+        s.refresh();
+      });
+
+      // When the stage is clicked, we just color each
+      // node and edge with its original color.
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+
+        // Same as in the previous event:
+        s.refresh();
+      });
+    }
+  );
+&lt;/script&gt;
+&lt;!-- [...] --&gt;</code></pre>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box" id="sigma-tuto-step2"></div>
     </div>
   </div>
 
@@ -292,12 +428,42 @@
 <script src="../assets/js/konami.js"></script>
 <script src="../assets/js/sigma.min.js"></script>
 <script src="../assets/js/sigma.plugins.animate.js"></script>
+<script src="../assets/js/sigma.parsers.gexf.js"></script>
+<script src="../assets/js/gexf-parser.js"></script>
 <script src="../assets/js/surprise.js"></script>
 <script src="../assets/js/highlight.pack.js"></script>
 
 <script>
   $(document).ready(function() {
     hljs.initHighlightingOnLoad();
+
+    $.event.special.tap = {
+      setup: function(data, namespaces) {
+        var $elem = $(this);
+        $elem.bind('touchstart', $.event.special.tap.handler)
+          .bind('touchmove', $.event.special.tap.handler)
+          .bind('touchend', $.event.special.tap.handler);
+      },
+
+      teardown: function(namespaces) {
+        var $elem = $(this);
+        $elem.unbind('touchstart', $.event.special.tap.handler)
+          .unbind('touchmove', $.event.special.tap.handler)
+          .unbind('touchend', $.event.special.tap.handler);
+      },
+
+      handler: function(event) {
+        event.preventDefault();
+        var $elem = $(this);
+        $elem.data(event.type, 1);
+        if (event.type === 'touchend' && !$elem.data('touchmove')) {
+          event.type = 'tap';
+          $.event.handle.apply(this, arguments);
+        } else if ($elem.data('touchend')) {
+          $elem.removeData('touchstart touchmove touchend');
+        }
+      }
+    };
 
     var _wrapper = $('#wrapper'),
         _header = $('header'),
@@ -319,7 +485,7 @@
     });
 
     // Deal with the menu:
-    $('header a[href^="#"]').click(function(e) {
+    $('a.local-link[href^="#"]').click(function(e) {
       $('.menu', _header).removeClass('visible');
       $('html, body').animate({
         scrollTop: $($(this).attr('href')).offset().top - _config.headerHeight
@@ -333,7 +499,7 @@
       else
         _header.addClass('scrolled');
 
-      $('a[href^="#"]', _header).removeClass('selected').each(function() {
+      $('a.local-link[href^="#"]').removeClass('selected').each(function() {
         var dom,
             target = $(this),
             id = target.attr('href');
@@ -347,7 +513,7 @@
           $(window).scrollTop() < dom.position().top - _header.height() - _config.margin + 1
         ) {
 
-          $('a[href="' + id + '"]', _header).addClass('selected');
+          $('a.local-link[href="' + id + '"]').addClass('selected');
           return false;
         }
       });
@@ -361,7 +527,7 @@
     // Sigma showcase in title:
     $.ajax({
       dataType: 'json',
-      url: '../assets/data/les_miserables.json',
+      url: '../assets/data/les-miserables.json',
       success: function(graph) {
         var lines = 15,
             prefix = 'file_';
@@ -415,13 +581,15 @@
           animate('grid_');
         }).bind('mouseleave', function() {
           animate('file_');
-        }).bind('touchstart', function() {
+        }).bind('tap', function() {
           animate();
         });
       }
     });
 
-    // Sigma first use case:
+    /**
+     * SIGMA FIRST USE CASE:
+     */
     new sigma({
       container: $('.box#sigma-first')[0],
       graph: {
@@ -471,6 +639,101 @@
         sideMargin: 2
       }
     });
+
+    /**
+     * SIGMA TUTO - STEP 1
+     */
+    sigma.parsers.gexf(
+      '../assets/data/les-miserables.gexf',
+      { // Here is the ID of the DOM element that
+        // will contain the graph:
+        container: 'sigma-tuto-step1'
+      },
+      function(s) {
+        // This function will execute when the graph
+        // is displayed, and s is the related sigma
+        // instance.
+      }
+    );
+
+    /**
+     * SIGMA TUTO - STEP 2
+     */
+    // Add a method to the graph model that returns an
+    // object with every neighbors of a node inside:
+    sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+      var k,
+          neighbors = {},
+          index = this.allNeighborsIndex[nodeId] || {};
+
+      for (k in index)
+        neighbors[k] = this.nodesIndex[k];
+
+      return neighbors;
+    });
+
+    sigma.parsers.gexf(
+      '../assets/data/les-miserables.gexf',
+      {
+        container: 'sigma-tuto-step2'
+      },
+      function(s) {
+        // We first need to save the original colors of our
+        // nodes and edges, like this:
+        s.graph.nodes().forEach(function(n) {
+          n.originalColor = n.color;
+        });
+        s.graph.edges().forEach(function(e) {
+          e.originalColor = e.color;
+        });
+
+        // When a node is clicked, we check for each node
+        // if it is a neighbor of the clicked one. If not,
+        // we set its color as grey, and else, it takes its
+        // original color.
+        // We do the same for the edges, and we only keep
+        // edges that have both extremities colored.
+        s.bind('clickNode', function(e) {
+          var nodeId = e.data.node.id,
+              toKeep = s.graph.neighbors(nodeId);
+          toKeep[nodeId] = e.data.node;
+
+          s.graph.nodes().forEach(function(n) {
+            if (toKeep[n.id])
+              n.color = n.originalColor;
+            else
+              n.color = '#eee';
+          });
+
+          s.graph.edges().forEach(function(e) {
+            if (toKeep[e.source] && toKeep[e.target])
+              e.color = e.originalColor;
+            else
+              e.color = '#eee';
+          });
+
+          // Since the data has been modified, we need to
+          // call the refresh method to make the colors
+          // update effective.
+          s.refresh();
+        });
+
+        // When the stage is clicked, we just color each
+        // node and edge with its original color.
+        s.bind('clickStage', function(e) {
+          s.graph.nodes().forEach(function(n) {
+            n.color = n.originalColor;
+          });
+
+          s.graph.edges().forEach(function(e) {
+            e.color = e.originalColor;
+          });
+
+          // Same as in the previous event:
+          s.refresh();
+        });
+      }
+    );
   });
 </script>
 

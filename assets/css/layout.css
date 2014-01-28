@@ -265,6 +265,16 @@ footer a.boo:hover, footer a.boo:active {
   margin: 12px;
 }
 
+.section .codebox {
+  background: #f4f0e4;
+  font-family: monospace;
+  font-size: 1.0rem;
+}
+
+.section .hljs {
+  background: none;
+}
+
 .line{
   clear: both;
   display: block;
@@ -273,10 +283,6 @@ footer a.boo:hover, footer a.boo:active {
   padding: 36px 0 0 0;
   border-bottom: 1px solid #aac789;
   background: transparent;
-}
-
-.section .hljs{
-  background: #f4f0e4;
 }
 
 .bottom {
