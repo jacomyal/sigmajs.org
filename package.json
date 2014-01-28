@@ -1,0 +1,29 @@
+{
+  "name": "sigmajs",
+  "version": "1.0.0",
+  "description": "sigma graph exploration library",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "assemble": "~0.4.35",
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "assemble"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacomyal/sigmajs.org.git"
+  },
+  "keywords": [
+    "sigmajs",
+    "graphs",
+    "networks",
+    "exploration"
+  ],
+  "author": "Jacomyal",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jacomyal/sigmajs.org/issues"
+  }
+}
