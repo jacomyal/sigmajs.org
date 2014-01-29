@@ -362,8 +362,7 @@
    * INITIALIZATION:
    * ***************
    */
-  // var konami = new Konami(function() {
-$(function() {
+  var konami = new Konami(function() {
     if (_s)
       return;
 
@@ -401,6 +400,5 @@ $(function() {
         });
       }
     });
-});
-  // });
+  });
 })();
