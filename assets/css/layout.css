@@ -197,6 +197,10 @@ footer a.boo:hover, footer a.boo:active {
   clear: both;
 }
 
+.below-the-footer a, .below-the-footer a:visited {
+  color: #ffffff;
+}
+
 #disclaimer{
   color: #f9eedc;
   padding: 18px 12px;
