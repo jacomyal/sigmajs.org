@@ -67,7 +67,6 @@
         s.dY += v * dY;
       }
     }
-    console.log(this.nodesArray.map(function(n) { return n.dX; }).join(' '));
 
     for (i = 0; i < l; i++) {
       s = this.nodesArray[i];
@@ -79,7 +78,6 @@
       // Collision with the _ground:
       s.y = Math.min(-_nodeRadius, s.y);
     }
-    // console.log(this.nodesArray.map(function(n) { return n.x; }).join(' '));
   });
 
 
@@ -157,7 +155,7 @@
         edgeColor: 'default'
       }
     });
-    _dom = $('#konami-container canvas:last-child');
+    _dom = $('#konami-container canvas.sigma-mouse');
     _disc = $('#disc');
     _ground = $('#ground');
     _c = _s.cameras[0];
@@ -296,8 +294,8 @@
           id,
           neighbors;
 
-      x = sigma.utils.getX(e) - _dom.width() / 2;
-      y = sigma.utils.getY(e) - _dom.height() / 2;
+      x = sigma.utils.getX(e.originalEvent) - _dom.width() / 2;
+      y = sigma.utils.getY(e.originalEvent) - _dom.height() / 2;
 
       p = _c.cameraPosition(x, y);
       x = p.x;
@@ -334,8 +332,8 @@
       });
     });
     _dom.on('mousemove', function(e) {
-      _mouseX = sigma.utils.getX(e);
-      _mouseY = sigma.utils.getY(e);
+      _mouseX = sigma.utils.getX(e.originalEvent);
+      _mouseY = sigma.utils.getY(e.originalEvent);
     });
     _dom.on('DOMMouseScroll mousewheel', function(e) {
       _radius *= sigma.utils.getDelta(e.originalEvent) < 0 ? 1 / _wheelRatio : _wheelRatio;
