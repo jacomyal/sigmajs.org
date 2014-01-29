@@ -440,34 +440,6 @@
   $(document).ready(function() {
     hljs.initHighlightingOnLoad();
 
-    $.event.special.tap = {
-      setup: function(data, namespaces) {
-        var $elem = $(this);
-        $elem.bind('touchstart', $.event.special.tap.handler)
-          .bind('touchmove', $.event.special.tap.handler)
-          .bind('touchend', $.event.special.tap.handler);
-      },
-
-      teardown: function(namespaces) {
-        var $elem = $(this);
-        $elem.unbind('touchstart', $.event.special.tap.handler)
-          .unbind('touchmove', $.event.special.tap.handler)
-          .unbind('touchend', $.event.special.tap.handler);
-      },
-
-      handler: function(event) {
-        event.preventDefault();
-        var $elem = $(this);
-        $elem.data(event.type, 1);
-        if (event.type === 'touchend' && !$elem.data('touchmove')) {
-          event.type = 'tap';
-          $.event.handle.apply(this, arguments);
-        } else if ($elem.data('touchend')) {
-          $elem.removeData('touchstart touchmove touchend');
-        }
-      }
-    };
-
     var _wrapper = $('#wrapper'),
         _header = $('header'),
         _footer = $('footer'),
@@ -580,12 +552,23 @@
           }
         }
 
+        var isDown = false,
+            frameID;
+
         $('#title').bind('mouseenter', function() {
           animate('grid_');
         }).bind('mouseleave', function() {
           animate('file_');
-        }).bind('tap', function() {
-          animate();
+        }).bind('touchstart', function() {
+          isDown = true;
+          clearTimeout(frameID);
+          frameID = setTimeout(function() {
+            isDown = false;
+          }, 100);
+        }).bind('touchend', function() {
+          if (isDown)
+            animate();
+          isDown = false;
         });
       }
     });
