@@ -21,7 +21,7 @@
       _springForce = 0.01,
       _springLength = 50,
       _maxDisplacement = 15,
-      _gravity = 1.5;
+      _gravity = 1;
 
 
 
@@ -46,7 +46,10 @@
       s = this.nodesArray[i];
       s.dX *= _inertia;
       s.dY *= _inertia;
+    }
 
+    for (i = 0; i < l; i++) {
+      s = this.nodesArray[i];
       s.dY += _gravity;
 
       for (j = i + 1; j < l; j++) {
@@ -64,6 +67,7 @@
         s.dY += v * dY;
       }
     }
+    console.log(this.nodesArray.map(function(n) { return n.dX; }).join(' '));
 
     for (i = 0; i < l; i++) {
       s = this.nodesArray[i];
@@ -75,6 +79,7 @@
       // Collision with the _ground:
       s.y = Math.min(-_nodeRadius, s.y);
     }
+    // console.log(this.nodesArray.map(function(n) { return n.x; }).join(' '));
   });
 
 
@@ -218,53 +223,59 @@
     _s.graph.computePhysics();
     _s.refresh();
 
-    if (_s.graph.nodes().length) {
-      var w = _dom.width(),
-          h = _dom.height();
+    var a,
+        w = _dom.width(),
+        h = _dom.height();
 
-      // The "rescale" middleware modifies the position of the nodes, but we
-      // need here the camera to deal with this. Here is the code:
-      var xMin = Infinity,
-          xMax = -Infinity,
-          yMin = Infinity,
-          yMax = -Infinity,
-          margin = 100,
-          scale;
+    // The "rescale" middleware modifies the position of the nodes, but we
+    // need here the camera to deal with this. Here is the code:
+    var xMin = Infinity,
+        xMax = -Infinity,
+        yMin = Infinity,
+        yMax = -Infinity,
+        margin = 100,
+        scale;
 
-      _s.graph.nodes().forEach(function(n) {
+    if ((a = _s.graph.nodes()).length)
+      a.forEach(function(n) {
         xMin = Math.min(n.x, xMin);
         xMax = Math.max(n.x, xMax);
         yMin = Math.min(n.y, yMin);
         yMax = Math.max(n.y, yMax);
       });
-
-      xMax += margin;
-      xMin -= margin;
-      yMax += margin;
-      yMin -= margin;
-
-      scale = Math.min(
-        w / Math.max(xMax - xMin, 1),
-        h / Math.max(yMax - yMin, 1)
-      );
-
-      _c.goTo({
-        x: (xMin + xMax) / 2,
-        y: (yMin + yMax) / 2,
-        ratio: 1 / scale
-      });
-
-      _ground.css('top', Math.max(h / 2 - Math.min((yMin + yMax) / 2 * scale, h), 0));
-
-      _disc.css({
-        width: 2 * _radius * scale,
-        height: 2 * _radius * scale,
-        top: _mouseY - _radius * scale,
-        left: _mouseX - _radius * scale,
-        'border-radius': _radius * scale,
-        'background-color': _spaceMode ? '#a22d27' : '#aac789'
-      });
+    else {
+      xMin = 0;
+      xMax = 0;
+      yMin = 0;
+      yMax = 0;
     }
+
+    xMax += margin;
+    xMin -= margin;
+    yMax += margin;
+    yMin -= margin;
+
+    scale = Math.min(
+      w / Math.max(xMax - xMin, 1),
+      h / Math.max(yMax - yMin, 1)
+    );
+
+    _c.goTo({
+      x: (xMin + xMax) / 2,
+      y: (yMin + yMax) / 2,
+      ratio: 1 / scale
+    });
+
+    _ground.css('top', Math.max(h / 2 - Math.min((yMin + yMax) / 2 * scale, h), 0));
+
+    _disc.css({
+      width: 2 * _radius * scale,
+      height: 2 * _radius * scale,
+      top: _mouseY - _radius * scale,
+      left: _mouseX - _radius * scale,
+      'border-radius': _radius * scale,
+      'background-color': _spaceMode ? '#a22d27' : '#aac789'
+    });
 
     _frame = requestAnimationFrame(frame);
   }
@@ -351,7 +362,8 @@
    * INITIALIZATION:
    * ***************
    */
-  var konami = new Konami(function() {
+  // var konami = new Konami(function() {
+$(function() {
     if (_s)
       return;
 
@@ -363,13 +375,16 @@
           '<div id="ground"></div>' +
         '</div>' +
         '<ul class="caption">' +
-          '<li>CLICK: Add a node, linked to nodes in the mouse area</li>' +
-          '<li>SPACEBAR + CLICK: Remove all nodes in the mouse area</li>' +
-          '<li>MOUSEWHEEL: Change the size of the mouse area</li>' +
+          '<li><strong>CLICK</strong>: Add a node, linked to nodes in the mouse area</li>' +
+          '<li><strong>SPACEBAR + CLICK</strong>: Remove all nodes in the mouse area</li>' +
+          '<li><strong>MOUSEWHEEL</strong>: Change the size of the mouse area</li>' +
         '</ul>' +
         '<div id="close-konami" class="fa fa-times"></div>' +
       '</div>'
-    ).css('height', 0).prependTo($('.below-the-footer .columns')).animate({
+    ).css({
+      height: 0,
+      color: '#fff'
+    }).prependTo($('.below-the-footer .columns')).animate({
       height: 300
     }, {
       duration: 400,
@@ -386,5 +401,6 @@
         });
       }
     });
-  });
+});
+  // });
 })();

@@ -473,7 +473,16 @@ a.entry.selected, a.entry:hover{
   -webkit-transition: background-color 200ms ease-out;
    -moz-transition: background-color 200ms ease-out;
      -o-transition: background-color 200ms ease-out;
-        transition: background-color 200ms ease-out; /* easeInOutCubic */
+        transition: background-color 200ms ease-out;
+}
+
+#konami, #konami-container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #konami-container {
@@ -516,6 +525,10 @@ a.entry.selected, a.entry:hover{
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+#konami strong {
+  color: #fff;
 }
 
 /* #Media Queries
