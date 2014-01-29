@@ -29,4 +29,4 @@ Finally, run the Grunt tasks:
 grunt
 ````
 
-At this point, the built website is available in the `dist` repository.
+At this point, the built website is available in the `dist` repository, with pages and built assets. Then, you just need to copy the `dist` folder content to the root of the `gh-pages` branch.
