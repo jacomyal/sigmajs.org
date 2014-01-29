@@ -3,14 +3,14 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         flatten: true,
-        assets: "assets",
-        layout: "layout/default.hbs",
-        partials: "partials/*.hbs",
-        data: "contents/*.json"
+        assets: 'assets',
+        layout: 'layout/default.hbs',
+        partials: 'partials/*.hbs',
+        data: 'contents/*.json'
       },
       dist:{
         files: {
-          'dist': ["pages/*.hbs" ]
+          'dist': ['pages/*.hbs' ]
         }
       }
     }

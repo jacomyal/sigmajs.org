@@ -4,10 +4,10 @@
   "description": "sigma.js website",
   "main": "Gruntfile.js",
   "dependencies": {
+    "grunt-gh-pages": "~0.9.0",
     "assemble": "~0.4.35",
     "grunt": "~0.4.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "assemble"
   },
@@ -15,9 +15,8 @@
     "type": "git",
     "url": "https://github.com/jacomyal/sigmajs.org.git"
   },
-  "author": "jacomyal",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jacomyal/sigmajs.org/issues"
-  }
+  },
+  "license": "MIT"
 }
