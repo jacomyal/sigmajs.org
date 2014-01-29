@@ -1,0 +1,597 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #f9f7ed;
+  height:100%;
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Lato', sans-serif;
+}
+
+.sigma {
+  font-family: 'Capsuula', 'Lato', sans-serif;
+}
+
+hr{
+  color: #f4f0e4;
+  background-color: #f4f0e4;
+  height: 6px;
+  margin: -0.5em 0;
+  padding: 0;
+  border: 0;
+  display:block;
+}
+
+header {
+  position: relative;
+  background-color: #ffffff;
+  padding: 18px 0;
+}
+
+header.scrolled {
+  border-bottom: 1px #f4f0e4 solid;
+}
+
+header .shadow{
+  bottom: 0px;
+  z-index: 0;
+  background-color: rgba(18,18,18,.018);
+  -webkit-transition: bottom 210ms ease-out;
+     -moz-transition: bottom 210ms ease-out;
+       -o-transition: bottom 210ms ease-out;
+          transition: bottom 210ms ease-out;
+}
+
+header .shadow-wrap {
+  background-color: #ffffff;
+}
+
+header .container .columns.menu-toggler a{
+  text-decoration: none;
+}
+
+#intro p {
+  font-size: 2.8rem;
+  line-height: 42px;
+}
+
+header .wrapper, footer .wrapper{
+  z-index: 2;
+  position: relative;
+}
+
+header.scrolled .shadow{
+  bottom: -6px;
+}
+
+#banner {
+  overflow: hidden;
+}
+
+#start{
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  width: 386px;
+  height: 36px;
+  margin-left: -202px;
+}
+
+#start .boo{
+  padding: 6px 8px;
+  border-radius: 2px;
+}
+
+#link-to-tutorial{
+  position:absolute;
+  left:0px;
+}
+
+#link-to-download{
+  position: absolute;
+  right: 0px;
+}
+
+#version {
+  position: absolute;
+  text-align: center;
+  width: 70px;
+  left: 50%;
+  margin-left: -26px;
+  margin-top: 4px;
+}
+
+.splash .line{
+  padding-top: 24px;
+}
+
+#title {
+  position: relative;
+  height: 348px;
+}
+
+#title div.title {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+
+#title h1{
+  margin-bottom: 6px;
+}
+
+#sigma-title {
+  position: absolute;
+  height: 270px;
+  left: 0;
+  top: 24px;
+  right: 0;
+  text-align: left;
+}
+
+footer {
+  padding: 0;
+  color: #ffffff;
+  clear: both;
+}
+
+footer.scroll-to-fixed-fixed {
+  border-top: 1px solid #c9423f;
+}
+
+footer .wrap-shadow{
+  background: #ec5148;
+}
+
+footer .shadow{
+  top: 0px;
+  background: rgba(236,81,72, .27);
+  -webkit-transition: top 210ms ease-out;
+     -moz-transition: top 210ms ease-out;
+       -o-transition: top 210ms ease-out;
+          transition: top 210ms ease-out;
+}
+
+footer.scroll-to-fixed-fixed .shadow{
+  top: -6px;
+}
+
+footer a.boo {
+  padding: 12px 0;
+}
+
+footer a.boo:hover, footer a.boo:active {
+
+}
+
+.below-the-footer {
+  padding: 24px 0;
+  color: #ffffff;
+  clear: both;
+}
+
+#disclaimer{
+  color: #f9eedc;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#disclaimer .author{
+  text-transform: uppercase;
+  color: white;
+}
+
+#disclaimer p {
+  margin: 6px 0;
+}
+
+.section p {
+  margin: 0;
+}
+
+.section h4 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.section h5 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.section h5.underline {
+  color: #437356;
+  background: #f4f0e4;
+  margin: 12px 0 12px 0;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.section h5.underline .fa {
+  float: right;
+  line-height: 24px;
+}
+
+.section .box {
+  background-color: #ffffff;
+  border: 1px solid #e0ded7;
+  height: 260px;
+  overflow: auto;
+  margin: 12px 0;
+}
+
+.section .headline {
+  color: #ec5148;
+}
+
+.section .description p{
+  margin-bottom: 12px;
+}
+
+.section .description{
+  margin-bottom: 24px;
+}
+
+.section .textbox {
+  margin: 12px;
+}
+
+.section .codebox {
+  background: #f4f0e4;
+  font-family: monospace;
+  font-size: 1.0rem;
+}
+
+.section .hljs {
+  background: none;
+}
+
+.line{
+  clear: both;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 36px 0 0 0;
+  border-bottom: 1px solid #aac789;
+  background: transparent;
+}
+
+.bottom {
+  padding-bottom: 20px;
+}
+
+.big-bottom {
+  padding-bottom: 36px;
+}
+
+.shadow {
+  position:absolute;
+  height: 6px;
+  width: 100%;
+  z-index:0;
+}
+
+.shadow-wrap{
+  z-index: 1;
+  position: absolute;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+@media only screen and (min-width: 767px) {
+  header .menu-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header .menu-button {
+    position: absolute;
+    right: 0;
+    top: 7px;
+  }
+
+  header .menu-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  header .title {
+    display: inline-block;
+  }
+
+  header .entry {
+    display: block;
+    border-top: #f9f7ed 1px solid;
+    padding-right: 60%;
+  }
+  header .entry:after {
+    content: '';
+    width: 60%;
+    display: inline-block;
+  }
+
+  header{
+    padding-bottom: 0;
+  }
+  header .container .columns.menu-toggler {
+    height: 44px;
+  }
+
+  header .container .columns.menu-toggler .menu-button{
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+       -moz-transition: -moz-transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+         -o-transition: -o-transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+            transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  }
+
+  header .container .columns.menu-toggler.hidden .menu-button{
+    -webkit-transform: rotate(-180deg);/* Agrandissement de la photo à l'échelle 1.4 et rotation de -10 degrés */
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  header .container .columns.menu {
+    overflow: hidden;
+    padding:0;
+    margin: 0;
+    height:0;
+    position: relative;
+    -webkit-transition: height 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+       -moz-transition: height 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+         -o-transition: height 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+            transition: height 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+  }
+
+  header .container .columns.menu.visible {
+    height: 196px;
+  }
+
+  header .menu .wrapper {
+    margin-top: 24px;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+  }
+
+  footer .container .four.columns {
+    width: 25%;
+  }
+
+  footer a.boo .label {
+    display: none
+  }
+
+  footer a.boo .fa {
+    padding-left: 0;
+  }
+
+  footer .mobile-only {
+    display: block;
+  }
+}
+
+/* Colors: */
+.green { color: #437356; }
+.bg-green { background-color: #437356; }
+.light-green { color: #aac789; }
+.bg-light-green { background-color: #aac789; }
+.red { color: #ec5148; }
+.bg-red { background-color: #ec5148; }
+.beige { color: #f9f7ed; }
+.bg-beige { background-color: #f9f7ed; }
+
+/* #Page Styles
+================================================== */
+a.boo {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  background: #ec5148;
+  color: #f9eedc;
+  text-align: center;
+  display: block;
+  -webkit-transition: background-color 200ms ease-out;
+   -moz-transition: background-color 200ms ease-out;
+     -o-transition: background-color 200ms ease-out;
+        transition: background-color 200ms ease-out;
+
+}
+
+a.boo:hover, a.boo:active {
+  color: white;
+  background-color: #c9423f;
+}
+
+a.boo .fa {
+  padding-left: 12px;
+}
+
+a.boo .fa.left {
+  padding-right: 12px;
+  padding-left: 0px;
+}
+
+a.boo.blank{
+  background: #f9f7ed;
+  color: #181818;
+}
+
+a.entry {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 12px;
+  -webkit-transition: background-color 200ms ease-out;
+   -moz-transition: background-color 200ms ease-out;
+     -o-transition: background-color 200ms ease-out;
+        transition: background-color 200ms ease-out; /* easeInOutCubic */
+}
+
+a.entry.selected, a.entry:hover{
+  background-color: #aac789;
+  /*color: #fff;*/
+}
+
+#konami {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 200ms ease-out;
+   -moz-transition: background-color 200ms ease-out;
+     -o-transition: background-color 200ms ease-out;
+        transition: background-color 200ms ease-out;
+}
+
+#konami, #konami-container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#konami-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+#konami #close-konami {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#konami #close-konami:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#konami-container #disc {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+#konami-container:hover #disc {
+  display: block
+}
+
+#konami-container #ground {
+  position: absolute;
+  background: #c9423f;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#konami strong {
+  color: #fff;
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 989px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 989px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+    a.boo.no-mobile {
+      display: none;
+    }
+  }
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+@font-face {
+  font-family: 'Capsuula';
+  src: url('../fonts/Capsuula-webfont.eot');
+  src: url('../fonts/Capsuula-webfont.eot?iefix') format('eot'),
+       url('../fonts/Capsuula-webfont.woff') format('woff'),
+       url('../fonts/Capsuula-webfont.ttf') format('truetype'),
+       url('../fonts/Capsuula-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* #Dummy-stuffs
+================================================== */
+.right-aligned{
+  text-align: right;
+}
+
+.center-aligned{
+  text-align: center;
+}
+
+.mobile-only{
+  display: none;
+}

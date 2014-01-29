@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Sigma js</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  ================================================== -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/highlights/default.css">
+
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+
+</head>
+<body class="bg-beige">
+  <header>
+  <div class="shadow-wrap"></div>
+  <div class="shadow"></div>
+  <div class="container wrapper">
+    <div class="six columns menu-toggler">
+      <a class="local-link" href="#banner"><h5 class="sigma title">sigma<span class="red">js</span></h5></a>
+      <div class="menu-button right-aligned fa fa-bars fa-2"></div>
+    </div>
+    <div class="ten columns right-aligned menu">
+      <div class="wrapper">
+        <a href="#get-started" class="local-link entry">get started</a>
+        <a href="#features" class="local-link entry">features</a>
+        <a href="#usecases" class="local-link entry">use cases</a>
+        <a href="#tutorial" class="local-link entry">tutorial</a>
+        <a href="#references" class="local-link entry">references</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+  <div class="splash container big-bottom" id="banner">
+    <div id="title" class="sixteen columns center-aligned big-bottom" style="position: relative">
+      <div id="sigma-title"></div>
+      <div class="title">
+        <h1 class="sigma">sigma<span class="red">js</span></h1>
+      </div>
+      <div id="start">
+        <a class="boo blank no-mobile local-link" id="link-to-tutorial" href="#tutorial"><i class="fa fa-globe left"></i>tutorial</a>
+        <h5 id="version">v1.0.0</h5>
+        <a class="boo no-mobile" id="link-to-download" href="#">download<i class="fa fa-download"></i></a>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom" id="intro">
+    <div class="sixteen columns">
+      <p>Sigma is a JavaScript library <strong>dedicated to graph drawing</strong>. It makes easy to publish networks on Web pages, and allows developers to integrate network exploration in rich Web applications.</p>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+  <div class="container big-bottom section" id="get-started">
+    <div class="headline eight columns">
+      <h3 class="green">Get started with sigma</h3>
+    </div>
+    <div class="description eight columns">
+      <p>The following example shows how simple it is to use sigma to display a JSON encoded graph file.</p>
+    </div>
+    <div class="one-third column">
+      <h5>Data</h5>
+      <div class="box codebox">
+<pre><code>{
+  &quot;nodes&quot;: [
+    {
+      &quot;id&quot;: &quot;n0&quot;,
+      &quot;label&quot;: &quot;A node&quot;,
+      &quot;x&quot;: 0,
+      &quot;y&quot;: 0,
+      &quot;size&quot;: 3
+    },
+    {
+      &quot;id&quot;: &quot;n1&quot;,
+      &quot;label&quot;: &quot;Another node&quot;,
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 1,
+      &quot;size&quot;: 2
+    },
+    {
+      &quot;id&quot;: &quot;n2&quot;,
+      &quot;label&quot;: &quot;And a last one&quot;,
+      &quot;x&quot;: 1,
+      &quot;y&quot;: 3,
+      &quot;size&quot;: 1
+    }
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;id&quot;: &quot;e0&quot;,
+      &quot;source&quot;: &quot;n0&quot;,
+      &quot;target&quot;: &quot;n1&quot;
+    },
+    {
+      &quot;id&quot;: &quot;e1&quot;,
+      &quot;source&quot;: &quot;n1&quot;,
+      &quot;target&quot;: &quot;n2&quot;
+    },
+    {
+      &quot;id&quot;: &quot;e2&quot;,
+      &quot;source&quot;: &quot;n2&quot;,
+      &quot;target&quot;: &quot;n0&quot;
+    }
+  ]
+}
+
+</code></pre>
+      </div>
+    </div>
+    <div class="one-third column">
+      <h5>HTML</h5>
+      <div class="box codebox">
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  #container {
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;sigma.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;sigma.parsers.json.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  sigma.parsers.json(&#039;data.json&#039;, {
+    container: &#039;container&#039;,
+    settings: {
+      defaultNodeColor: &#039;#ec5148&#039;
+    }
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+    </div>
+    <div class="one-third column">
+      <h5>Result</h5>
+      <div class="box" id="sigma-first"></div>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom section" id="features">
+    <div class="eight columns">
+      <h3 class="headline green">Features</h3>
+    </div>
+
+    <div class="description eight columns">
+      <h4 class="green">Dedicated to graph drawing.</h4>
+      <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of built-in features, such as Canvas and WebGL renderers or mouse and touch support, to make networks manipulation on Web pages smooth and fast for the user.</p>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-check-square-o green"></i>Plug and play!</h5>
+      <div class="textbox">
+        <p>The default configuration of <span class="sigma">sigma<span class="red">js</span></span> deals with mouse and touch support, refreshing and rescaling when the container's size changes, rendering on WebGL if the browser supports it and Canvas else, recentering the graph and adapting the nodes and edges sizes to the screen...</p>
+      </div>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-pencil green"></i>Custom rendering</h5>
+      <div class="textbox">
+        <p><span class="sigma">sigma<span class="red">js</span></span> provides a lot of different settings to make it easy to customize how to draw and interact with networks. And you can also directly add your own function to your scripts to render nodes and edges <em>the exact way you want</em>.</p>
+      </div>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-puzzle-piece green"></i>Highly extensible</h5>
+      <div class="textbox">
+        <p><span class="sigma">sigma<span class="red">js</span></span> is a rendering engine, and it is up to you to add all the interactivity you want. The public API makes it possible to modify the data, move the camera, refresh the rendering, listen to events...</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom section" id="usecases">
+    <div class="eight columns">
+      <h3 class="headline green">Use cases</h3>
+    </div>
+    <div class="description eight columns">
+      <h4 class="green">From beginners to advanced users.</h4>
+      <p><span class="sigma">sigma<span class="red">js</span></span> aims to help you display networks on the Web, from simple interactive publications of networks to rich Web applications featuring dynamic network exploration.</p>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-coffee"></i>Display a network</h5>
+      <div class="textbox">
+        <p>You can just instanciate sigma by giving it the data and the DOM container, and it works. And for <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.json">JSON</a> or <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.gexf">GEXF</a> encoded graphs, the related plugin will deal with loading and parsing the file.</p>
+      </div>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-coffee"></i><i class="fa fa-coffee"></i>Add some basic interaction</h5>
+      <div class="textbox">
+        <p>Update the data and refresh the drawing when you want. Bind custom functions to sigma's events to adapt the interactions to the needs of your application.</p>
+      </div>
+    </div>
+
+    <div class="one-third column">
+      <h5 class="underline"><i class="fa fa-coffee"></i><i class="fa fa-coffee"></i><i class="fa fa-coffee"></i>Develop and use plugins</h5>
+      <div class="textbox">
+        <p>For more complex use cases, it is possible to develop and use plugins that add features to sigma. Some are already available <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins">on the repository</a>, for <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.plugins.animate">animating the graph</a> or apply a <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.layout.forceAtlas2">force-directed layout</a> to your graph.</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom section" id="tutorial">
+    <div class="sixteen columns">
+      <h3 class="headline green">Tutorial</h3>
+    </div>
+
+    <div class="sixteen columns">
+      <div class="textbox">
+        <p>Let's assume we have a graph, exported in GEXF from Gephi, and we want to display it with sigma. In this tutorial, we will use the graph of character co-occurrences in Victor Hugo’s Les Misérables, available by default in Gephi.</p>
+        <p>But we also want that, when the user clicks on a node, only the clicked node and its neighbors stay colored and with their good size, the other nodes and edges must become grey and small.</p>
+      </div>
+    </div>
+
+    <div class="sixteen columns">
+      <h4>1. Load and display the graph</h4>
+      <div class="textbox">
+        <p>Here, let's just assume that in our web page, we have an HTML element with the id "sigma-container" to display our graph. This element's with and height can be whatever we want, and sigma will adapt the elements it adds into it by itself. Also, we must import sigma and add a script tag that will contain the JavaScript code.</p>
+        <p>Then, it's pretty easy: since sigma provides a <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins/sigma.parsers.gexf">plugin</a> dedicated to load and parse GEXF graph files. So, all we have to do is to load the plugin and use it, as described in the plugin's documentation.</p>
+        <p>At this point, the graph should already be displayed, and manipulated with the mouse or touch.</p>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box codebox">
+<pre><code>&lt;!-- [...] --&gt;
+&lt;div id=&quot;sigma-container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;path/to/sigma.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/gexf-parser.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/sigma.parsers.gexf.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  sigma.parsers.gexf(
+    'path/to/les-miserables.gexf',
+    { // Here is the ID of the DOM element that
+      // will contain the graph:
+      container: 'sigma-container'
+    },
+    function(s) {
+      // This function will execute when the graph
+      // is displayed, and s is the related sigma
+      // instance.
+    }
+  );
+&lt;/script&gt;
+&lt;!-- [...] --&gt;</code></pre>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box" id="sigma-tuto-step1"></div>
+    </div>
+
+    <div class="sixteen columns">
+      <h4>2. Bind callbacks to events</h4>
+      <div class="textbox">
+        <p>The first thing we need to do is to facilitate the way to retrieve the neighbors of a node. And the best way to do that is to add a method to the graph model.</p>
+        <p>Basically, the graph model provide a public access to the nodes and edges arrays, but it also maintains some more indexes accessible only from its methods, including every neighbors of each node.</p>
+        <p>Then, we just need to bind functions to some events, that will first modify the colors of the nodes and edges, and then refresh the rendering.</p>
+        <p>And it's done!</p>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box codebox">
+<pre><code>&lt;!-- [...] --&gt;
+&lt;div id=&quot;sigma-container&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;path/to/sigma.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/gexf-parser.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/sigma.parsers.gexf.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  // Add a method to the graph model that returns an
+  // object with every neighbors of a node inside:
+  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+    var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
+
+    for (k in index)
+      neighbors[k] = this.nodesIndex[k];
+
+    return neighbors;
+  });
+
+  sigma.parsers.gexf(
+    'path/to/les-miserables.gexf',
+    {
+      container: 'sigma-container'
+    },
+    function(s) {
+      // We first need to save the original colors of our
+      // nodes and edges, like this:
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.color;
+      });
+      s.graph.edges().forEach(function(e) {
+        e.originalColor = e.color;
+      });
+
+      // When a node is clicked, we check for each node
+      // if it is a neighbor of the clicked one. If not,
+      // we set its color as grey, and else, it takes its
+      // original color.
+      // We do the same for the edges, and we only keep
+      // edges that have both extremities colored.
+      s.bind('clickNode', function(e) {
+        var nodeId = e.data.node.id,
+            toKeep = s.graph.neighbors(nodeId);
+        toKeep[nodeId] = e.data.node;
+
+        s.graph.nodes().forEach(function(n) {
+          if (toKeep[n.id])
+            n.color = n.originalColor;
+          else
+            n.color = '#eee';
+        });
+
+        s.graph.edges().forEach(function(e) {
+          if (toKeep[e.source] &amp;&amp; toKeep[e.target])
+            e.color = e.originalColor;
+          else
+            e.color = '#eee';
+        });
+
+        // Since the data has been modified, we need to
+        // call the refresh method to make the colors
+        // update effective.
+        s.refresh();
+      });
+
+      // When the stage is clicked, we just color each
+      // node and edge with its original color.
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+
+        // Same as in the previous event:
+        s.refresh();
+      });
+    }
+  );
+&lt;/script&gt;
+&lt;!-- [...] --&gt;</code></pre>
+      </div>
+    </div>
+    <div class="eight columns">
+      <div class="box" id="sigma-tuto-step2"></div>
+    </div>
+
+    <div class="line"></div>
+  </div>
+
+
+
+  <div class="container big-bottom section" id="references">
+    <div class="sixteen columns">
+      <h3 class="headline green">References</h3>
+    </div>
+
+    <div class="eight columns">
+      <h5 class="underline"><i class="fa fa-wrench green"></i>Documentation</h5>
+      <div class="textbox">
+        <p>Many different resources are available to help you, such as <a href="https://github.com/jacomyal/sigma.js/wiki">the Wiki</a>, <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/examples">the examples</a> or <a href="https://github.com/jacomyal/sigma.js/tree/draft-v1.0.0/plugins">the plugins</a>. And if your questions remain unsolved, you can <a href="https://github.com/jacomyal/sigma.js/issues">post an issue</a> on the Github repository.</p>
+      </div>
+    </div>
+    <div class="eight columns">
+      <h5 class="underline"><i class="fa fa-terminal green"></i>Source code</h5>
+      <div class="textbox">
+        <p>The source code is tested, commented, and published on Github under the MIT License. And contributions are welcome! Please read the related paragraph before getting started, before sending pull requests.</p>
+      </div>
+    </div>
+  </div>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-scrolltofixed-min.js"></script>
+<script src="assets/js/highlight.pack.js"></script>
+<script src="assets/js/sigma.min.js"></script>
+<script src="assets/js/sigma.plugins.animate.js"></script>
+<script src="assets/js/sigma.parsers.gexf.js"></script>
+<script src="assets/js/gexf-parser.js"></script>
+<script src="assets/js/highlight.pack.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/surprise.min.js"></script>
+
+  <footer class="bg-red">
+  <div class="shadow-wrap"></div>
+  <div class="shadow "></div>
+  <div class="container wrapper">
+    <div class="four columns">
+      <a class="boo" href="https://github.com/jacomyal/sigma.js"><span class="label">fork on github</span> <i class="fa fa-github"></i></a>
+    </div>
+    <div class="four columns">
+      <a class="boo" href="https://twitter.com/sigmajs"><span class="label">follow on twitter</span> <i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="four columns">
+      <a class="boo" href="/github.com/"><span class="label">download v1.0.0</span> <i class="fa fa-download"></i></a>
+    </div>
+    <div class="four columns">
+      <a class="boo" href="http://medialab.sciences-po.fr"><span class="label">SciencesPo - médialab</span> <span class="mobile-only">medialab</span></a>
+    </div>
+  </div>
+</footer>
+
+
+<div class="below-the-footer bg-red">
+  <div class="container">
+    <div class="sixteen columns">
+      <div id="disclaimer">
+        <p>sigmajs is developed by <span class="author">Alexis Jacomy</span>, with the help of <span class="author">Guillaume Plique</span>. </p>
+        <p>design by <span class="author">Daniele Guido</span></p>
+        A special thanks to <span class="author">medialab Sciences-Po</span> Paris
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
