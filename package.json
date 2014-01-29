@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/jacomyal/sigmajs.org/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-copy": "~0.5.0"
+  }
 }
