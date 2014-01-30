@@ -13,7 +13,7 @@
 <body>
 <div id="container"></div>
 <script src="sigma.min.js"></script>
-<script src="sigma.parsers.json.js"></script>
+<script src="sigma.parsers.json.min.js"></script>
 <script>
   sigma.parsers.json('data.json', {
     container: 'container',

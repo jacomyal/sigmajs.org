@@ -1,9 +1,8 @@
 ### Step 1
 <!-- [...] -->
 <div id="sigma-container"></div>
-<script src="path/to/sigma.js"></script>
-<script src="path/to/gexf-parser.js"></script>
-<script src="path/to/sigma.parsers.gexf.js"></script>
+<script src="path/to/sigma.min.js"></script>
+<script src="path/to/sigma.parsers.gexf.min.js"></script>
 <script>
   sigma.parsers.gexf(
     'path/to/les-miserables.gexf',
@@ -24,9 +23,8 @@
 ### Step 2
 <!-- [...] -->
 <div id="sigma-container"></div>
-<script src="path/to/sigma.js"></script>
-<script src="path/to/gexf-parser.js"></script>
-<script src="path/to/sigma.parsers.gexf.js"></script>
+<script src="path/to/sigma.min.js"></script>
+<script src="path/to/sigma.parsers.gexf.min.js"></script>
 <script>
   // Add a method to the graph model that returns an
   // object with every neighbors of a node inside:
