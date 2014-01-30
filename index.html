@@ -38,6 +38,18 @@
   <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29798319-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 </head>
 <body class="bg-beige">
   <header>
@@ -45,7 +57,7 @@
   <div class="shadow"></div>
   <div class="container wrapper">
     <div class="six columns menu-toggler">
-      <a class="local-link" href="#banner"><h5 class="sigma title">sigma<span class="red">js</span></h5></a>
+      <a class="local-link" href="#banner"><h5 class="sigma title"><img class="logo" src="assets/img/logo.svg">sigma<span class="red">js</span></h5></a>
       <div class="menu-button right-aligned fa fa-bars fa-2"></div>
     </div>
     <div class="ten columns right-aligned menu">
@@ -70,7 +82,7 @@
       <div id="start">
         <a class="boo blank no-mobile local-link" id="link-to-tutorial" href="#tutorial"><i class="fa fa-globe left"></i>tutorial</a>
         <h5 id="version">v1.0.0</h5>
-        <a class="boo no-mobile" id="link-to-download" href="#">download<i class="fa fa-download"></i></a>
+        <a class="boo no-mobile" id="link-to-download" href="https://github.com/jacomyal/sigma.js/releases/">download<i class="fa fa-download"></i></a>
       </div>
     </div>
     <div class="line"></div>
@@ -430,9 +442,8 @@
 <script src="assets/js/jquery-scrolltofixed-min.js"></script>
 <script src="assets/js/highlight.pack.js"></script>
 <script src="assets/js/sigma.min.js"></script>
-<script src="assets/js/sigma.plugins.animate.js"></script>
-<script src="assets/js/sigma.parsers.gexf.js"></script>
-<script src="assets/js/gexf-parser.js"></script>
+<script src="assets/js/sigma.plugins.animate.min.js"></script>
+<script src="assets/js/sigma.parsers.gexf.min.js"></script>
 <script src="assets/js/highlight.pack.js"></script>
 <script src="assets/js/index.js"></script>
 <script src="assets/js/surprise.min.js"></script>
