@@ -37,7 +37,32 @@
   <link rel="apple-touch-icon" href="{{assets}}/images/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{{assets}}/images/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="{{assets}}/images/apple-touch-icon-114x114.png">
+  <style>
+  #container{
+    min-height: 300px;
+  }
+  #container .buttons button{
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 12px;
+  }
 
+  .container.title{
+    margin-top: 32px;
+  }
+  .container.title *{
+    margin-left: 12px;
+  }
+  .container.title h2{
+    font-weight: normal;
+    
+  }
+
+  .sigma-scene{
+    background-color:#401613;
+  }
+  </style>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29798319-1']);
@@ -53,7 +78,24 @@
 </head>
 <body class="bg-beige">
   {{>header}}
-  {{>body}}
+  <div class="container title big-bottom">
+    <h2>untitled</h2>
+    <div>or, how to love the bomb.</div>
+  </div>
+  <div class="container example big-bottom">
+    
+
+    {{>body}}
+    
+  </div>
+  <div class="container explaination big-bottom">
+    Test
+  </div>
   {{>footer}}
+   <script src="{{assets}}/js/jquery.min.js"></script>
+    <script src="{{assets}}/js/jquery-scrolltofixed-min.js"></script>
+    <script src="{{assets}}/js/highlight.pack.js"></script>
+    <script src="{{assets}}/js/index.examples.js"></script>
+    <script src="{{assets}}/js/surprise.min.js"></script>
 </body>
 </html>

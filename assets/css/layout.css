@@ -423,8 +423,10 @@ footer a.boo:hover, footer a.boo:active {
 
 /* #Page Styles
 ================================================== */
-a.boo {
+button, a.boo {
   font-size: 1.2rem;
+  border-width: 0px;
+  text-shadow: none;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
@@ -439,9 +441,10 @@ a.boo {
 
 }
 
-a.boo:hover, a.boo:active {
+button:hover, a.boo:hover, a.boo:active {
   color: white;
-  background-color: #c9423f;
+  background: #c9423f;
+  border-width: 0px;
 }
 
 a.boo .fa {
