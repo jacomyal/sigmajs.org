@@ -1,4 +1,4 @@
-sigmajs.org - v1.0.0
+sigmajs.org - v1.0.2
 ====================
 
 Here is sigma.js' website. The `master` branch presents the resources to build the website, and the `gh-pages` branch contains the built files.
