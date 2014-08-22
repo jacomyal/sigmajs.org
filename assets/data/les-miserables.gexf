@@ -14,7 +14,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="28.685715"></viz:size>
-        <viz:position x="-266.82776" y="-299.6904" z="0.0"></viz:position>
+        <viz:position x="-266.82776" y="299.6904" z="0.0"></viz:position>
         <viz:color r="235" g="81" b="72"></viz:color>
       </node>
       <node id="1" label="Napoleon">
@@ -22,7 +22,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-418.08344" y="-446.8853" z="0.0"></viz:position>
+        <viz:position x="-418.08344" y="446.8853" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="2" label="MlleBaptistine">
@@ -30,7 +30,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="9.485714"></viz:size>
-        <viz:position x="-212.76357" y="-245.29176" z="0.0"></viz:position>
+        <viz:position x="-212.76357" y="245.29176" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="3" label="MmeMagloire">
@@ -38,7 +38,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="9.485714"></viz:size>
-        <viz:position x="-242.82404" y="-235.26283" z="0.0"></viz:position>
+        <viz:position x="-242.82404" y="235.26283" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="4" label="CountessDeLo">
@@ -46,7 +46,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-379.30386" y="-429.06424" z="0.0"></viz:position>
+        <viz:position x="-379.30386" y="429.06424" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="5" label="Geborand">
@@ -54,7 +54,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-417.26337" y="-406.03506" z="0.0"></viz:position>
+        <viz:position x="-417.26337" y="406.03506" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="6" label="Champtercier">
@@ -62,7 +62,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-332.6012" y="-485.16974" z="0.0"></viz:position>
+        <viz:position x="-332.6012" y="485.16974" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="7" label="Cravatte">
@@ -70,7 +70,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-382.69568" y="-475.09113" z="0.0"></viz:position>
+        <viz:position x="-382.69568" y="475.09113" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="8" label="Count">
@@ -78,7 +78,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-320.384" y="-387.17325" z="0.0"></viz:position>
+        <viz:position x="-320.384" y="387.17325" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="9" label="OldMan">
@@ -86,7 +86,7 @@
           <attvalue for="modularity_class" value="0"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-344.39832" y="-451.16772" z="0.0"></viz:position>
+        <viz:position x="-344.39832" y="451.16772" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="10" label="Labarre">
@@ -94,7 +94,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-89.34107" y="-234.56128" z="0.0"></viz:position>
+        <viz:position x="-89.34107" y="234.56128" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="11" label="Valjean">
@@ -102,7 +102,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="100.0"></viz:size>
-        <viz:position x="-87.93029" y="6.8120565" z="0.0"></viz:position>
+        <viz:position x="-87.93029" y="-6.8120565" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="12" label="Marguerite">
@@ -110,7 +110,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="-339.77908" y="184.69139" z="0.0"></viz:position>
+        <viz:position x="-339.77908" y="-184.69139" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="13" label="MmeDeR">
@@ -118,7 +118,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-194.31313" y="-178.55301" z="0.0"></viz:position>
+        <viz:position x="-194.31313" y="178.55301" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="14" label="Isabeau">
@@ -126,7 +126,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-158.05168" y="-201.99768" z="0.0"></viz:position>
+        <viz:position x="-158.05168" y="201.99768" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="15" label="Gervais">
@@ -134,7 +134,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-127.701546" y="-242.55057" z="0.0"></viz:position>
+        <viz:position x="-127.701546" y="242.55057" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="16" label="Tholomyes">
@@ -142,7 +142,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="25.942856"></viz:size>
-        <viz:position x="-385.2226" y="393.5572" z="0.0"></viz:position>
+        <viz:position x="-385.2226" y="-393.5572" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="17" label="Listolier">
@@ -150,7 +150,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="-516.55884" y="393.98975" z="0.0"></viz:position>
+        <viz:position x="-516.55884" y="-393.98975" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="18" label="Fameuil">
@@ -158,7 +158,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="-464.79382" y="493.57944" z="0.0"></viz:position>
+        <viz:position x="-464.79382" y="-493.57944" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="19" label="Blacheville">
@@ -166,7 +166,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="-515.1624" y="456.9891" z="0.0"></viz:position>
+        <viz:position x="-515.1624" y="-456.9891" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="20" label="Favourite">
@@ -174,7 +174,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="-408.12122" y="464.5048" z="0.0"></viz:position>
+        <viz:position x="-408.12122" y="-464.5048" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="21" label="Dahlia">
@@ -182,7 +182,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="-456.44113" y="425.13303" z="0.0"></viz:position>
+        <viz:position x="-456.44113" y="-425.13303" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="22" label="Zephine">
@@ -190,7 +190,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="-459.1107" y="362.5133" z="0.0"></viz:position>
+        <viz:position x="-459.1107" y="-362.5133" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="23" label="Fantine">
@@ -198,7 +198,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="42.4"></viz:size>
-        <viz:position x="-313.42786" y="289.44803" z="0.0"></viz:position>
+        <viz:position x="-313.42786" y="-289.44803" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="24" label="MmeThenardier">
@@ -206,7 +206,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="31.428574"></viz:size>
-        <viz:position x="4.6313396" y="273.8517" z="0.0"></viz:position>
+        <viz:position x="4.6313396" y="-273.8517" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="25" label="Thenardier">
@@ -214,7 +214,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="45.142853"></viz:size>
-        <viz:position x="82.80825" y="203.1144" z="0.0"></viz:position>
+        <viz:position x="82.80825" y="-203.1144" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="26" label="Cosette">
@@ -222,7 +222,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="31.428574"></viz:size>
-        <viz:position x="78.64646" y="31.512747" z="0.0"></viz:position>
+        <viz:position x="78.64646" y="-31.512747" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="27" label="Javert">
@@ -230,7 +230,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="47.88571"></viz:size>
-        <viz:position x="-81.46074" y="204.20204" z="0.0"></viz:position>
+        <viz:position x="-81.46074" y="-204.20204" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="28" label="Fauchelevent">
@@ -238,7 +238,7 @@
           <attvalue for="modularity_class" value="4"></attvalue>
         </attvalues>
         <viz:size value="12.228573"></viz:size>
-        <viz:position x="-225.73984" y="-82.41631" z="0.0"></viz:position>
+        <viz:position x="-225.73984" y="82.41631" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="29" label="Bamatabois">
@@ -246,7 +246,7 @@
           <attvalue for="modularity_class" value="3"></attvalue>
         </attvalues>
         <viz:size value="23.2"></viz:size>
-        <viz:position x="-385.6842" y="20.206686" z="0.0"></viz:position>
+        <viz:position x="-385.6842" y="-20.206686" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="30" label="Perpetue">
@@ -254,7 +254,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="-403.92447" y="197.69823" z="0.0"></viz:position>
+        <viz:position x="-403.92447" y="-197.69823" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="31" label="Simplice">
@@ -262,7 +262,7 @@
           <attvalue for="modularity_class" value="2"></attvalue>
         </attvalues>
         <viz:size value="12.228573"></viz:size>
-        <viz:position x="-281.4253" y="158.45137" z="0.0"></viz:position>
+        <viz:position x="-281.4253" y="-158.45137" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="32" label="Scaufflaire">
@@ -270,7 +270,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-122.41348" y="-210.37503" z="0.0"></viz:position>
+        <viz:position x="-122.41348" y="210.37503" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="33" label="Woman1">
@@ -278,7 +278,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="-234.6001" y="113.15067" z="0.0"></viz:position>
+        <viz:position x="-234.6001" y="-113.15067" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="34" label="Judge">
@@ -286,7 +286,7 @@
           <attvalue for="modularity_class" value="3"></attvalue>
         </attvalues>
         <viz:size value="17.714287"></viz:size>
-        <viz:position x="-387.84915" y="-58.7059" z="0.0"></viz:position>
+        <viz:position x="-387.84915" y="58.7059" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="35" label="Champmathieu">
@@ -294,7 +294,7 @@
           <attvalue for="modularity_class" value="3"></attvalue>
         </attvalues>
         <viz:size value="17.714287"></viz:size>
-        <viz:position x="-338.2307" y="-87.48405" z="0.0"></viz:position>
+        <viz:position x="-338.2307" y="87.48405" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="36" label="Brevet">
@@ -302,7 +302,7 @@
           <attvalue for="modularity_class" value="3"></attvalue>
         </attvalues>
         <viz:size value="17.714287"></viz:size>
-        <viz:position x="-453.26874" y="-58.94648" z="0.0"></viz:position>
+        <viz:position x="-453.26874" y="58.94648" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="37" label="Chenildieu">
@@ -310,7 +310,7 @@
           <attvalue for="modularity_class" value="3"></attvalue>
         </attvalues>
         <viz:size value="17.714287"></viz:size>
-        <viz:position x="-386.44904" y="-140.05937" z="0.0"></viz:position>
+        <viz:position x="-386.44904" y="140.05937" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="38" label="Cochepaille">
@@ -318,7 +318,7 @@
           <attvalue for="modularity_class" value="3"></attvalue>
         </attvalues>
         <viz:size value="17.714287"></viz:size>
-        <viz:position x="-446.7876" y="-123.38005" z="0.0"></viz:position>
+        <viz:position x="-446.7876" y="123.38005" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="39" label="Pontmercy">
@@ -326,7 +326,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="9.485714"></viz:size>
-        <viz:position x="336.49738" y="269.55914" z="0.0"></viz:position>
+        <viz:position x="336.49738" y="-269.55914" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="40" label="Boulatruelle">
@@ -334,7 +334,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="29.187843" y="460.13132" z="0.0"></viz:position>
+        <viz:position x="29.187843" y="-460.13132" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="41" label="Eponine">
@@ -342,7 +342,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="31.428574"></viz:size>
-        <viz:position x="238.36697" y="210.00926" z="0.0"></viz:position>
+        <viz:position x="238.36697" y="-210.00926" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="42" label="Anzelma">
@@ -350,7 +350,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="9.485714"></viz:size>
-        <viz:position x="189.69513" y="346.50662" z="0.0"></viz:position>
+        <viz:position x="189.69513" y="-346.50662" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="43" label="Woman2">
@@ -358,7 +358,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="9.485714"></viz:size>
-        <viz:position x="-187.00418" y="145.02663" z="0.0"></viz:position>
+        <viz:position x="-187.00418" y="-145.02663" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="44" label="MotherInnocent">
@@ -366,7 +366,7 @@
           <attvalue for="modularity_class" value="4"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="-252.99521" y="-129.87549" z="0.0"></viz:position>
+        <viz:position x="-252.99521" y="129.87549" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="45" label="Gribier">
@@ -374,7 +374,7 @@
           <attvalue for="modularity_class" value="4"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="-296.07935" y="-163.11964" z="0.0"></viz:position>
+        <viz:position x="-296.07935" y="163.11964" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="46" label="Jondrette">
@@ -382,7 +382,7 @@
           <attvalue for="modularity_class" value="5"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="550.3201" y="-522.4031" z="0.0"></viz:position>
+        <viz:position x="550.3201" y="522.4031" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="47" label="MmeBurgon">
@@ -390,7 +390,7 @@
           <attvalue for="modularity_class" value="5"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="488.13535" y="-356.8573" z="0.0"></viz:position>
+        <viz:position x="488.13535" y="356.8573" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="48" label="Gavroche">
@@ -398,7 +398,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="61.600006"></viz:size>
-        <viz:position x="387.89572" y="-110.462326" z="0.0"></viz:position>
+        <viz:position x="387.89572" y="110.462326" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="49" label="Gillenormand">
@@ -406,7 +406,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="126.4831" y="-68.10622" z="0.0"></viz:position>
+        <viz:position x="126.4831" y="68.10622" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="50" label="Magnon">
@@ -414,7 +414,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="127.07365" y="113.05923" z="0.0"></viz:position>
+        <viz:position x="127.07365" y="-113.05923" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="51" label="MlleGillenormand">
@@ -422,7 +422,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="162.63559" y="-117.6565" z="0.0"></viz:position>
+        <viz:position x="162.63559" y="117.6565" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="52" label="MmePontmercy">
@@ -430,7 +430,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="353.66415" y="205.89165" z="0.0"></viz:position>
+        <viz:position x="353.66415" y="-205.89165" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="53" label="MlleVaubois">
@@ -438,7 +438,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="165.43939" y="-339.7736" z="0.0"></viz:position>
+        <viz:position x="165.43939" y="339.7736" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="54" label="LtGillenormand">
@@ -446,7 +446,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="12.228573"></viz:size>
-        <viz:position x="137.69348" y="-196.1069" z="0.0"></viz:position>
+        <viz:position x="137.69348" y="196.1069" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="55" label="Marius">
@@ -454,7 +454,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="53.37143"></viz:size>
-        <viz:position x="206.44687" y="13.805411" z="0.0"></viz:position>
+        <viz:position x="206.44687" y="-13.805411" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="56" label="BaronessT">
@@ -462,7 +462,7 @@
           <attvalue for="modularity_class" value="6"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="194.82993" y="-224.78036" z="0.0"></viz:position>
+        <viz:position x="194.82993" y="224.78036" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="57" label="Mabeuf">
@@ -470,7 +470,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="31.428574"></viz:size>
-        <viz:position x="597.6618" y="-135.18481" z="0.0"></viz:position>
+        <viz:position x="597.6618" y="135.18481" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="58" label="Enjolras">
@@ -478,7 +478,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="42.4"></viz:size>
-        <viz:position x="355.78366" y="74.882454" z="0.0"></viz:position>
+        <viz:position x="355.78366" y="-74.882454" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="59" label="Combeferre">
@@ -486,7 +486,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="31.428574"></viz:size>
-        <viz:position x="515.2961" y="46.167564" z="0.0"></viz:position>
+        <viz:position x="515.2961" y="-46.167564" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="60" label="Prouvaire">
@@ -494,7 +494,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="25.942856"></viz:size>
-        <viz:position x="614.29285" y="69.3104" z="0.0"></viz:position>
+        <viz:position x="614.29285" y="-69.3104" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="61" label="Feuilly">
@@ -502,7 +502,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="31.428574"></viz:size>
-        <viz:position x="550.1917" y="128.17537" z="0.0"></viz:position>
+        <viz:position x="550.1917" y="-128.17537" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="62" label="Courfeyrac">
@@ -510,7 +510,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="36.91429"></viz:size>
-        <viz:position x="436.17184" y="12.7286825" z="0.0"></viz:position>
+        <viz:position x="436.17184" y="-12.7286825" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="63" label="Bahorel">
@@ -518,7 +518,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="34.17143"></viz:size>
-        <viz:position x="602.55225" y="-16.421427" z="0.0"></viz:position>
+        <viz:position x="602.55225" y="16.421427" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="64" label="Bossuet">
@@ -526,7 +526,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="36.91429"></viz:size>
-        <viz:position x="455.81955" y="115.45826" z="0.0"></viz:position>
+        <viz:position x="455.81955" y="-115.45826" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="65" label="Joly">
@@ -534,7 +534,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="34.17143"></viz:size>
-        <viz:position x="516.40784" y="-47.242233" z="0.0"></viz:position>
+        <viz:position x="516.40784" y="47.242233" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="66" label="Grantaire">
@@ -542,7 +542,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="28.685715"></viz:size>
-        <viz:position x="646.4313" y="151.06331" z="0.0"></viz:position>
+        <viz:position x="646.4313" y="-151.06331" z="0.0"></viz:position>
         <viz:color r="235" g="81" b="72"></viz:color>
       </node>
       <node id="67" label="MotherPlutarch">
@@ -550,7 +550,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
-        <viz:position x="668.9568" y="-204.65488" z="0.0"></viz:position>
+        <viz:position x="668.9568" y="204.65488" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="68" label="Gueulemer">
@@ -558,7 +558,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="28.685715"></viz:size>
-        <viz:position x="78.4799" y="347.15146" z="0.0"></viz:position>
+        <viz:position x="78.4799" y="-347.15146" z="0.0"></viz:position>
         <viz:color r="235" g="81" b="72"></viz:color>
       </node>
       <node id="69" label="Babet">
@@ -566,7 +566,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="28.685715"></viz:size>
-        <viz:position x="150.35959" y="298.50797" z="0.0"></viz:position>
+        <viz:position x="150.35959" y="-298.50797" z="0.0"></viz:position>
         <viz:color r="235" g="81" b="72"></viz:color>
       </node>
       <node id="70" label="Claquesous">
@@ -574,7 +574,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="28.685715"></viz:size>
-        <viz:position x="137.3717" y="410.2809" z="0.0"></viz:position>
+        <viz:position x="137.3717" y="-410.2809" z="0.0"></viz:position>
         <viz:color r="235" g="81" b="72"></viz:color>
       </node>
       <node id="71" label="Montparnasse">
@@ -582,7 +582,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="25.942856"></viz:size>
-        <viz:position x="234.87747" y="400.85983" z="0.0"></viz:position>
+        <viz:position x="234.87747" y="-400.85983" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="72" label="Toussaint">
@@ -590,7 +590,7 @@
           <attvalue for="modularity_class" value="1"></attvalue>
         </attvalues>
         <viz:size value="9.485714"></viz:size>
-        <viz:position x="40.942253" y="-113.78272" z="0.0"></viz:position>
+        <viz:position x="40.942253" y="113.78272" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="73" label="Child1">
@@ -598,7 +598,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="437.939" y="-291.58234" z="0.0"></viz:position>
+        <viz:position x="437.939" y="291.58234" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="74" label="Child2">
@@ -606,7 +606,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="6.742859"></viz:size>
-        <viz:position x="466.04922" y="-283.3606" z="0.0"></viz:position>
+        <viz:position x="466.04922" y="283.3606" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="75" label="Brujon">
@@ -614,7 +614,7 @@
           <attvalue for="modularity_class" value="7"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="238.79364" y="314.06345" z="0.0"></viz:position>
+        <viz:position x="238.79364" y="-314.06345" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
       <node id="76" label="MmeHucheloup">
@@ -622,7 +622,7 @@
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="20.457146"></viz:size>
-        <viz:position x="712.18353" y="-4.8131495" z="0.0"></viz:position>
+        <viz:position x="712.18353" y="4.8131495" z="0.0"></viz:position>
         <viz:color r="236" g="81" b="72"></viz:color>
       </node>
     </nodes>
