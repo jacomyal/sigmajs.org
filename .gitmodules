@@ -1,0 +1,4 @@
+[submodule "sigma"]
+	path = sigma
+	url = git@github.com:jacomyal/sigma.js
+	branch = v2
