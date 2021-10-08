@@ -604,3 +604,15 @@ a.entry.selected, a.entry:hover{
 .mobile-only{
   display: none;
 }
+
+.banner{
+  background: #ec5148;
+  color: #f9eedc;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  font-weight: bold;
+}
+.banner a{
+  color: #f9eedc;
+}
